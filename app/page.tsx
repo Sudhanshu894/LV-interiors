@@ -539,6 +539,12 @@ function Services() {
     budget: "",
     services: [] as string[],
   });
+  const [bookingReference, setBookingReference] = useState<string>("");
+  
+  // Helper function to generate booking reference
+  const generateBookingReference = () => {
+    return Date.now().toString().slice(-8);
+  };
   
   const services = [
     {
@@ -791,8 +797,9 @@ function Services() {
         })
       ];
       
-      bookingData.services = selectedItems;
-      console.log('Booking submitted:', bookingData);
+      setBookingData(prev => ({ ...prev, services: selectedItems }));
+      setBookingReference(generateBookingReference());
+      console.log('Booking submitted:', { ...bookingData, services: selectedItems });
       setBookingStep('success');
     }
   };
@@ -1557,7 +1564,7 @@ function Services() {
                 </p>
                 <div className="bg-cream rounded-xl p-6 mb-8 text-left">
                   <p className="font-semibold text-charcoal mb-2">Booking Reference:</p>
-                  <p className="text-coffee/70 text-sm">#{Date.now().toString().slice(-8)}</p>
+                  <p className="text-coffee/70 text-sm">#{bookingReference}</p>
                   <p className="font-semibold text-charcoal mb-2 mt-4">Services:</p>
                   <ul className="space-y-1">
                     {bookingData.services.map((service, idx) => (
@@ -1574,6 +1581,7 @@ function Services() {
                     setBookingStep('form');
                     setContractAccepted(false);
                     setBookingData({ name: "", phone: "", email: "", address: "", budget: "", services: [] });
+                    setBookingReference("");
                     setSelectedServices([]);
                     setSelectedSubcategories([]);
                   }}
