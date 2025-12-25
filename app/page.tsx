@@ -145,6 +145,9 @@ function useScrollAnimation() {
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    const currentRef = ref.current;
+    if (!currentRef) return;
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -154,13 +157,11 @@ function useScrollAnimation() {
       { threshold: 0.1 }
     );
 
-    if (ref.current) {
-      observer.observe(ref.current);
-    }
+    observer.observe(currentRef);
 
     return () => {
-      if (ref.current) {
-        observer.unobserve(ref.current);
+      if (currentRef) {
+        observer.unobserve(currentRef);
       }
     };
   }, []);
@@ -176,8 +177,8 @@ function Navigation() {
     { href: "#home", label: "Home" },
     { href: "#about", label: "About Us" },
     { href: "#services", label: "Services" },
+    { href: "/gallery", label: "Gallery" },
     { href: "#testimonials", label: "Testimonials" },
-    { href: "#contact", label: "Contact" },
   ];
 
   return (
@@ -188,7 +189,7 @@ function Navigation() {
           <a href="#home" className="flex items-center gap-2 hover-lift interactive-icon">
             <div className="w-40 h-40 rounded-xl flex items-center justify-center transition-transform hover:scale-110">
               {/* <span className="text-white font-bold text-lg font-[family-name:var(--font-display)]">A</span> */}
-              <Image src="/Logo1.png" alt="Adhunik Interiors" width={100} height={100} />
+              <Image src="/Logo1.png" alt="LV Interiors" width={100} height={100} />
             </div>
             <span className="font-[family-name:var(--font-display)] text-2xl font-semibold text-espresso">
             {/* <span className="text-caramel">Interiors</span> */}
@@ -408,7 +409,7 @@ function About() {
               Who <span className="text-gradient">We Are</span>
             </h2>
             <p className="text-lg text-coffee/80 mb-6 leading-relaxed">
-              At Adhunik Interiors, we understand the challenges of creating exceptional spaces that blend elegance, quality, and functionality.
+              At LV Interiors, we understand the challenges of creating exceptional spaces that blend elegance, quality, and functionality.
             </p>
             <p className="text-coffee/70 mb-8 leading-relaxed">
               As a premier interior services provider, we&apos;ve made it our mission to simplify your furnishing journey. We provide execution-focused interior services with plans to expand into complete design solutions. From initial consultation to final touches, every project is handled with care and precision.
@@ -515,6 +516,11 @@ function ImageCarousel({ images, autoPlay = true, interval = 4000 }: { images: s
   );
 }
 
+// Helper function to generate booking reference (moved outside component to avoid render issues)
+const generateBookingReference = () => {
+  return Date.now().toString().slice(-8);
+};
+
 // Services Catalogue Section
 function Services() {
   const [ref, isVisible] = useScrollAnimation();
@@ -540,11 +546,6 @@ function Services() {
     services: [] as string[],
   });
   const [bookingReference, setBookingReference] = useState<string>("");
-  
-  // Helper function to generate booking reference
-  const generateBookingReference = () => {
-    return Date.now().toString().slice(-8);
-  };
   
   const services = [
     {
@@ -1507,7 +1508,7 @@ function Services() {
                   <div className="bg-cream rounded-xl p-6 max-h-96 overflow-y-auto">
                     <h4 className="font-semibold text-charcoal mb-4">Terms & Conditions</h4>
                     <div className="space-y-3 text-sm text-coffee/70 leading-relaxed">
-                      <p><strong>1. Service Agreement:</strong> This contract outlines the services to be provided by Adhunik Interiors.</p>
+                      <p><strong>1. Service Agreement:</strong> This contract outlines the services to be provided by LV Interiors.</p>
                       <p><strong>2. Payment Terms:</strong> 30% advance payment required upon booking confirmation. Remaining 70% upon project completion.</p>
                       <p><strong>3. Timeline:</strong> Project timeline will be discussed and agreed upon before commencement.</p>
                       <p><strong>4. Quality Assurance:</strong> We guarantee premium quality workmanship and materials.</p>
@@ -1527,7 +1528,7 @@ function Services() {
                       className="mt-1 w-5 h-5 rounded border-sand text-caramel focus:ring-caramel"
                     />
                     <label htmlFor="contract-accept" className="text-sm text-coffee cursor-pointer">
-                      I have read and agree to the terms and conditions of this service contract. I understand that by proceeding, I am entering into a binding agreement with Adhunik Interiors.
+                      I have read and agree to the terms and conditions of this service contract. I understand that by proceeding, I am entering into a binding agreement with LV Interiors.
                     </label>
                   </div>
                   
@@ -1560,7 +1561,7 @@ function Services() {
                   Booking Successful!
                 </h3>
                 <p className="text-coffee/70 mb-8">
-                  Thank you for booking with Adhunik Interiors. We&apos;ve received your booking details and will contact you within 24 hours to confirm and schedule your project.
+                  Thank you for booking with LV Interiors. We&apos;ve received your booking details and will contact you within 24 hours to confirm and schedule your project.
                 </p>
                 <div className="bg-cream rounded-xl p-6 mb-8 text-left">
                   <p className="font-semibold text-charcoal mb-2">Booking Reference:</p>
@@ -1606,7 +1607,7 @@ function Testimonials() {
     {
       name: "Priya Sharma",
       role: "Homeowner, Delhi",
-      content: "Adhunik Interiors transformed our 3BHK completely. The painting work was flawless and the team was professional throughout. Highly recommend their services!",
+      content: "LV Interiors transformed our 3BHK completely. The painting work was flawless and the team was professional throughout. Highly recommend their services!",
       rating: 5,
     },
     {
@@ -1618,7 +1619,7 @@ function Testimonials() {
     {
       name: "Anita Mehta",
       role: "Interior Designer",
-      content: "As an interior designer, I've worked with many contractors. Adhunik Interiors stands out for their quality wood polish work and PU finishing. A reliable partner.",
+      content: "As an interior designer, I've worked with many contractors. LV Interiors stands out for their quality wood polish work and PU finishing. A reliable partner.",
       rating: 5,
     },
     {
@@ -1651,7 +1652,7 @@ function Testimonials() {
             What Our <span className="text-gradient">Clients Say</span>
           </h2>
           <p className="section-subtitle mx-auto mt-4">
-            Don&apos;t just take our word for it. Here&apos;s what our happy clients have to say about their experience with Adhunik Interiors.
+            Don&apos;t just take our word for it. Here&apos;s what our happy clients have to say about their experience with LV Interiors.
           </p>
         </div>
         
@@ -1776,13 +1777,13 @@ function Contact() {
                 </div>
               </a>
               
-              <a href="mailto:info@adhunikinteriors.com" className="flex items-center gap-4 group hover-lift">
+              <a href="mailto:info@LVinteriors.com" className="flex items-center gap-4 group hover-lift">
                 <div className="w-14 h-14 rounded-xl bg-caramel/10 flex items-center justify-center text-caramel group-hover:bg-caramel group-hover:text-white transition-all interactive-icon">
                   <MailIcon />
                 </div>
                 <div>
                   <p className="text-sm text-coffee/60">Email Us</p>
-                  <p className="text-lg font-semibold text-charcoal">info@adhunikinteriors.com</p>
+                  <p className="text-lg font-semibold text-charcoal">info@LVinteriors.com</p>
                 </div>
               </a>
               
@@ -1967,7 +1968,7 @@ function Footer() {
                 <span className="text-white font-bold text-lg font-[family-name:var(--font-display)]">A</span>
               </div>
               <span className="font-[family-name:var(--font-display)] text-2xl font-semibold text-cream">
-                Adhunik Interiors
+                LV Interiors
               </span>
             </div>
             <p className="text-cream/60 mb-6 max-w-md leading-relaxed">
@@ -1990,7 +1991,7 @@ function Footer() {
                 <PhoneIcon />
           </a>
           <a
-                href="mailto:info@adhunikinteriors.com"
+                href="mailto:info@LVinteriors.com"
                 className="w-10 h-10 rounded-lg bg-cream/10 flex items-center justify-center text-cream hover:bg-caramel transition-colors"
               >
                 <MailIcon />
@@ -2002,9 +2003,9 @@ function Footer() {
           <div>
             <h4 className="font-semibold text-cream mb-6">Quick Links</h4>
             <ul className="space-y-3">
-              {["Home", "About Us", "Services", "Testimonials", "Contact"].map((link) => (
+              {["Home", "About Us", "Services", "Gallery", "Testimonials"].map((link) => (
                 <li key={link}>
-                  <a href={`#${link.toLowerCase().replace(" ", "")}`} className="hover:text-caramel transition-colors">
+                  <a href={link === "Gallery" ? "/gallery" : `#${link.toLowerCase().replace(" ", "")}`} className="hover:text-caramel transition-colors">
                     {link}
                   </a>
                 </li>
@@ -2036,7 +2037,7 @@ function Footer() {
         {/* Bottom Bar */}
         <div className="border-t border-cream/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-cream/50 text-sm">
-            © {new Date().getFullYear()} Adhunik Interiors. All rights reserved.
+            © {new Date().getFullYear()} LV Interiors. All rights reserved.
           </p>
           <p className="text-cream/50 text-sm">
             Crafted with ❤️ for beautiful spaces
