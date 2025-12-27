@@ -27,7 +27,7 @@ const PhoneIcon = () => (
 
 const WhatsAppIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
   </svg>
 );
 
@@ -121,6 +121,18 @@ const ChevronRightIcon = () => (
   </svg>
 );
 
+const ChevronDownIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <polyline points="6 9 12 15 18 9"></polyline>
+  </svg>
+);
+
+const ChevronUpIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <polyline points="18 15 12 9 6 15"></polyline>
+  </svg>
+);
+
 const ImageIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
     <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
@@ -136,6 +148,32 @@ const FileTextIcon = () => (
     <line x1="16" y1="13" x2="8" y2="13"></line>
     <line x1="16" y1="17" x2="8" y2="17"></line>
     <polyline points="10 9 9 9 8 9"></polyline>
+  </svg>
+);
+
+const ElectricIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+    <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+  </svg>
+);
+
+const PlumbingIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M14 2v4a2 2 0 0 0 2 2h4"></path>
+    <path d="M5 8V6a2 2 0 0 1 2-2h7l5 5v13a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-2"></path>
+    <circle cx="9" cy="15" r="1"></circle>
+    <circle cx="15" cy="15" r="1"></circle>
+    <path d="M9 15v-3a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v3"></path>
+  </svg>
+);
+
+const FlooringIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+    <rect x="3" y="3" width="18" height="18" rx="2"></rect>
+    <line x1="3" y1="9" x2="21" y2="9"></line>
+    <line x1="3" y1="15" x2="21" y2="15"></line>
+    <line x1="9" y1="3" x2="9" y2="21"></line>
+    <line x1="15" y1="3" x2="15" y2="21"></line>
   </svg>
 );
 
@@ -187,12 +225,12 @@ function Navigation() {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <a href="#home" className="flex items-center gap-2 hover-lift interactive-icon">
-            <div className="w-40 h-40 rounded-xl flex items-center justify-center transition-transform hover:scale-110">
+            <div className="w-50 h-50 rounded-xl flex items-center justify-center transition-transform hover:scale-110">
               {/* <span className="text-white font-bold text-lg font-[family-name:var(--font-display)]">A</span> */}
-              <Image src="/Logo1.png" alt="LV Interiors" width={100} height={100} />
+              <Image src="/LVLogo.png" alt="LV Interiors" width={120} height={120} />
             </div>
             <span className="font-[family-name:var(--font-display)] text-2xl font-semibold text-espresso">
-            {/* <span className="text-caramel">Interiors</span> */}
+              {/* <span className="text-caramel">Interiors</span> */}
             </span>
           </a>
 
@@ -251,11 +289,11 @@ function Hero() {
     <section id="home" className="relative min-h-screen flex items-center overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 pattern-overlay opacity-30"></div>
-      
+
       {/* Decorative Shapes */}
       <div className="absolute top-20 right-10 w-72 h-72 bg-caramel/10 rounded-full blur-3xl"></div>
       <div className="absolute bottom-20 left-10 w-96 h-96 bg-gold/10 rounded-full blur-3xl"></div>
-      
+
       <div className="relative max-w-7xl mx-auto px-6 lg:px-8 py-32 md:py-40">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Content */}
@@ -264,17 +302,17 @@ function Hero() {
               <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse-slow"></span>
               <span className="text-sm font-medium text-coffee">Trusted by 500+ Happy Clients</span>
             </div>
-            
+
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-[family-name:var(--font-display)] font-bold text-charcoal leading-tight animate-fade-in-up delay-100">
               Transform Your
               <span className="block text-gradient">Living Spaces</span>
-          </h1>
-            
+            </h1>
+
             <p className="text-lg text-coffee/80 max-w-xl animate-fade-in-up delay-200">
-              Premium painting, wood finishing, and renovation services that bring your vision to life. 
+              Premium painting, wood finishing, and renovation services that bring your vision to life.
               Serving homes and businesses with excellence and attention to detail.
             </p>
-            
+
             <div className="flex flex-wrap gap-4 animate-fade-in-up delay-300">
               <a href="#services" className="btn-primary inline-flex items-center gap-2">
                 Explore Services
@@ -284,8 +322,8 @@ function Hero() {
                 Contact Us
                 <ArrowRightIcon />
               </a>
-        </div>
-            
+            </div>
+
             {/* Stats */}
             <div className="grid grid-cols-3 gap-8 pt-8 border-t border-sand animate-fade-in-up delay-400">
               <div>
@@ -302,25 +340,23 @@ function Hero() {
               </div>
             </div>
           </div>
-          
+
           {/* Hero Image */}
           <div className="relative lg:pl-12 animate-fade-in-up delay-300">
             <div className="relative">
               {/* Main Image Container */}
               <div className="relative rounded-3xl overflow-hidden shadow-2xl">
-                <div className="aspect-[4/5] bg-gradient-to-br from-caramel/20 to-coffee/30 flex items-center justify-center">
-                  <div className="text-center p-8">
-                    <div className="w-24 h-24 mx-auto mb-6 rounded-2xl gradient-warm flex items-center justify-center">
-                      <SparklesIcon />
-                    </div>
-                    <p className="text-2xl font-[family-name:var(--font-display)] text-coffee font-semibold">
-                      Beautiful Interiors
-                    </p>
-                    <p className="text-coffee/60 mt-2">Crafted with passion</p>
-                  </div>
+                <div className="aspect-[4/5] relative">
+                  <Image
+                    src="/hero-interior.png"
+                    alt="Elegant Interior Design"
+                    fill
+                    className="object-cover"
+                    priority
+                  />
                 </div>
               </div>
-              
+
               {/* Floating Badge */}
               <div className="absolute -bottom-6 -left-6 floating-badge animate-float hover-lift cursor-pointer">
                 <div className="flex items-center gap-3">
@@ -333,7 +369,7 @@ function Hero() {
                   </div>
                 </div>
               </div>
-              
+
               {/* Another Floating Badge */}
               <div className="absolute -top-4 -right-4 floating-badge animate-float delay-200 hover-lift cursor-pointer">
                 <div className="text-center">
@@ -358,50 +394,62 @@ function Hero() {
 // About Section
 function About() {
   const [ref, isVisible] = useScrollAnimation();
-  
+
   return (
     <section id="about" className="section-padding bg-white relative overflow-hidden">
       {/* Decorative */}
       <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-cream to-transparent"></div>
-      
+
       <div className="max-w-7xl mx-auto px-6 lg:px-8 relative">
         <div ref={ref} className={`grid lg:grid-cols-2 gap-16 items-center ${isVisible ? 'scroll-fade-in visible' : 'scroll-fade-in'}`}>
           {/* Image Side */}
           <div className="relative">
             <div className="grid grid-cols-2 gap-4">
               <div className="space-y-4">
-                <div className="rounded-2xl overflow-hidden shadow-lg h-48 bg-gradient-to-br from-caramel/30 to-coffee/20 flex items-center justify-center hover-lift tilt-effect">
-                  <div className="interactive-icon">
-                    <PaintBrushIcon />
-                  </div>
+                <div className="rounded-2xl overflow-hidden shadow-lg h-48 hover-lift tilt-effect relative">
+                  <Image
+                    src="/painting-service.png"
+                    alt="Premium Painting Services"
+                    fill
+                    className="object-cover"
+                  />
                 </div>
-                <div className="rounded-2xl overflow-hidden shadow-lg h-64 bg-gradient-to-br from-gold/30 to-caramel/20 flex items-center justify-center hover-lift tilt-effect">
-                  <div className="interactive-icon">
-                    <WoodIcon />
-                  </div>
+                <div className="rounded-2xl overflow-hidden shadow-lg h-64 hover-lift tilt-effect relative">
+                  <Image
+                    src="/woodwork-service.png"
+                    alt="Custom Wood Works"
+                    fill
+                    className="object-cover"
+                  />
                 </div>
               </div>
               <div className="space-y-4 pt-8">
-                <div className="rounded-2xl overflow-hidden shadow-lg h-64 bg-gradient-to-br from-coffee/20 to-espresso/30 flex items-center justify-center hover-lift tilt-effect">
-                  <div className="interactive-icon">
-                    <HammerIcon />
-                  </div>
+                <div className="rounded-2xl overflow-hidden shadow-lg h-64 hover-lift tilt-effect relative">
+                  <Image
+                    src="/renovation-service.png"
+                    alt="Professional Renovations"
+                    fill
+                    className="object-cover"
+                  />
                 </div>
-                <div className="rounded-2xl overflow-hidden shadow-lg h-48 bg-gradient-to-br from-terracotta/30 to-caramel/20 flex items-center justify-center hover-lift tilt-effect">
-                  <div className="interactive-icon">
-                    <SparklesIcon />
-                  </div>
+                <div className="rounded-2xl overflow-hidden shadow-lg h-48 hover-lift tilt-effect relative">
+                  <Image
+                    src="/hero-interior.png"
+                    alt="Beautiful Interiors"
+                    fill
+                    className="object-cover"
+                  />
                 </div>
               </div>
             </div>
-            
+
             {/* Experience Badge */}
             <div className="absolute -bottom-6 left-1/2 -translate-x-1/2 bg-white rounded-2xl shadow-xl p-6 text-center">
               <p className="stat-number">8+</p>
               <p className="text-sm text-coffee/70 font-medium">Years of Excellence</p>
             </div>
           </div>
-          
+
           {/* Content Side */}
           <div className="lg:pl-8">
             <div className="decorative-line mb-6"></div>
@@ -414,7 +462,7 @@ function About() {
             <p className="text-coffee/70 mb-8 leading-relaxed">
               As a premier interior services provider, we&apos;ve made it our mission to simplify your furnishing journey. We provide execution-focused interior services with plans to expand into complete design solutions. From initial consultation to final touches, every project is handled with care and precision.
             </p>
-            
+
             {/* Key Points */}
             <div className="space-y-4 mb-8">
               {[
@@ -431,7 +479,7 @@ function About() {
                 </div>
               ))}
             </div>
-            
+
             <a href="#contact" className="btn-primary inline-flex items-center gap-2">
               Start Your Project
               <ArrowRightIcon />
@@ -471,9 +519,8 @@ function ImageCarousel({ images, autoPlay = true, interval = 4000 }: { images: s
         {images.map((img, index) => (
           <div
             key={index}
-            className={`absolute inset-0 transition-opacity duration-500 ${
-              index === currentIndex ? 'opacity-100' : 'opacity-0'
-            }`}
+            className={`absolute inset-0 transition-opacity duration-500 ${index === currentIndex ? 'opacity-100' : 'opacity-0'
+              }`}
           >
             <div
               className="w-full h-full bg-cover bg-center"
@@ -504,9 +551,8 @@ function ImageCarousel({ images, autoPlay = true, interval = 4000 }: { images: s
               <button
                 key={index}
                 onClick={() => setCurrentIndex(index)}
-                className={`h-2 rounded-full transition-all ${
-                  index === currentIndex ? 'bg-white w-8' : 'bg-white/50 w-2'
-                }`}
+                className={`h-2 rounded-full transition-all ${index === currentIndex ? 'bg-white w-8' : 'bg-white/50 w-2'
+                  }`}
               />
             ))}
           </div>
@@ -525,9 +571,10 @@ const generateBookingReference = () => {
 function Services() {
   const [ref, isVisible] = useScrollAnimation();
   const [selectedServices, setSelectedServices] = useState<number[]>([]);
-  const [selectedSubcategories, setSelectedSubcategories] = useState<{serviceId: number; subcategoryId: string}[]>([]);
+  const [selectedSubcategories, setSelectedSubcategories] = useState<{ serviceId: number; subcategoryId: string }[]>([]);
   const [showRegistration, setShowRegistration] = useState(false);
-  const [showSubcategoryDetail, setShowSubcategoryDetail] = useState<{serviceId: number; subcategoryId: string} | null>(null);
+  const [showSubcategoryDetail, setShowSubcategoryDetail] = useState<{ serviceId: number; subcategoryId: string } | null>(null);
+  const [expandedNestedSubcategories, setExpandedNestedSubcategories] = useState<Set<string>>(new Set());
   const [showBooking, setShowBooking] = useState(false);
   const [bookingStep, setBookingStep] = useState<'form' | 'contract' | 'success'>('form');
   const [contractAccepted, setContractAccepted] = useState(false);
@@ -546,79 +593,47 @@ function Services() {
     services: [] as string[],
   });
   const [bookingReference, setBookingReference] = useState<string>("");
-  
+
   const services = [
     {
       id: 1,
-      icon: <PaintBrushIcon />,
-      title: "Painting & Wall Finishes",
-      description: "Transform your walls with premium paints and textures that last for years.",
-      bgGradient: "from-amber-100 to-orange-50",
+      icon: <ElectricIcon />,
+      title: "MEP Services",
+      description: "Professional Mechanical, Electrical, and Plumbing services for your home and business.",
+      bgGradient: "from-blue-100 to-cyan-50",
+      imagePath: "/service-1.png",
       subcategories: [
         {
-          id: "interior-painting",
-          title: "Interior Painting",
-          description: "Professional interior painting services using premium quality paints. We offer a wide range of colors and finishes to match your style.",
+          id: "electric",
+          title: "Electric",
+          description: "Complete electrical solutions including wiring, installations, repairs, and maintenance services.",
           images: [
-            "https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=800&h=600&fit=crop",
-            "https://images.unsplash.com/photo-1560185127-6ed189bf02f4?w=800&h=600&fit=crop",
-            "https://images.unsplash.com/photo-1560185007-cde436f6a4d0?w=800&h=600&fit=crop",
+            "https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=800&h=600&fit=crop",
+            "https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=800&h=600&fit=crop",
           ],
           gallery: [
-            "https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=800&h=600&fit=crop",
-            "https://images.unsplash.com/photo-1560185127-6ed189bf02f4?w=800&h=600&fit=crop",
-            "https://images.unsplash.com/photo-1560185007-cde436f6a4d0?w=800&h=600&fit=crop",
-            "https://images.unsplash.com/photo-1560185127-6ed189bf02f4?w=800&h=600&fit=crop",
+            "https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=800&h=600&fit=crop",
+            "https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=800&h=600&fit=crop",
+            "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=800&h=600&fit=crop",
           ],
           feedbacks: [
-            { name: "Rahul Mehta", rating: 5, comment: "Excellent work! The team was professional and the finish is flawless." },
-            { name: "Sneha Patel", rating: 5, comment: "Love the color choices. The painting quality exceeded our expectations." },
+            { name: "Rajesh Kumar", rating: 5, comment: "Excellent electrical work! Professional and safe installation." },
           ],
         },
         {
-          id: "exterior-painting",
-          title: "Exterior Painting",
-          description: "Weather-resistant exterior painting that protects and beautifies your home. We use premium exterior-grade paints.",
+          id: "plumbing",
+          title: "Plumbing",
+          description: "Expert plumbing services including installation, repairs, maintenance, and water supply solutions.",
           images: [
-            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&h=600&fit=crop",
-            "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&h=600&fit=crop",
+            "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=800&h=600&fit=crop",
+            "https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=800&h=600&fit=crop",
           ],
           gallery: [
-            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&h=600&fit=crop",
-            "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&h=600&fit=crop",
+            "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=800&h=600&fit=crop",
+            "https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=800&h=600&fit=crop",
           ],
           feedbacks: [
-            { name: "Amit Singh", rating: 5, comment: "Great exterior paint job. Withstood monsoon perfectly!" },
-          ],
-        },
-        {
-          id: "texture-paint",
-          title: "Texture Paint & Feature Walls",
-          description: "Create stunning feature walls with textured paints. We offer various texture options including sand, smooth, and artistic finishes.",
-          images: [
-            "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=800&h=600&fit=crop",
-            "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=800&h=600&fit=crop",
-          ],
-          gallery: [
-            "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=800&h=600&fit=crop",
-            "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=800&h=600&fit=crop",
-          ],
-          feedbacks: [
-            { name: "Vikram Singh", rating: 5, comment: "The texture wall in our living room is absolutely stunning!" },
-          ],
-        },
-        {
-          id: "waterproof-coating",
-          title: "Waterproof Coating",
-          description: "Protect your walls from moisture and water damage with our premium waterproof coating solutions.",
-          images: [
-            "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=800&h=600&fit=crop",
-          ],
-          gallery: [
-            "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=800&h=600&fit=crop",
-          ],
-          feedbacks: [
-            { name: "Priya Sharma", rating: 5, comment: "No more leakage issues. Excellent waterproofing work!" },
+            { name: "Sunita Agarwal", rating: 5, comment: "Great plumbing service. Fixed all our water issues!" },
           ],
         },
       ],
@@ -626,14 +641,15 @@ function Services() {
     {
       id: 2,
       icon: <WoodIcon />,
-      title: "Wood Finish, Polish & PU",
-      description: "Restore and enhance the natural beauty of your wooden surfaces.",
+      title: "Interior & Furnishing",
+      description: "Complete interior solutions including polishing, wood works, and fixed installations.",
       bgGradient: "from-amber-50 to-yellow-50",
+      imagePath: "/service-2.png",
       subcategories: [
         {
-          id: "wood-polishing",
-          title: "Wood Polishing",
-          description: "Professional wood polishing services to restore the natural shine and beauty of your wooden furniture and floors.",
+          id: "polishing-pu-duco",
+          title: "Polishing & PU & Duco",
+          description: "Professional polishing services including PU coating and Duco finishing for furniture and surfaces.",
           images: [
             "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=800&h=600&fit=crop",
             "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&h=600&fit=crop",
@@ -643,105 +659,399 @@ function Services() {
             "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&h=600&fit=crop",
           ],
           feedbacks: [
-            { name: "Amit Patel", rating: 5, comment: "My old furniture looks brand new after polishing!" },
+            { name: "Amit Patel", rating: 5, comment: "Excellent polishing work. Furniture looks brand new!" },
+          ],
+          nestedSubcategories: [
+            {
+              id: "polishing",
+              title: "Polishing",
+              description: "Professional polishing services for furniture and wooden surfaces.",
+              images: ["https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=800&h=600&fit=crop"],
+              gallery: ["https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=800&h=600&fit=crop"],
+              feedbacks: [{ name: "Amit Patel", rating: 5, comment: "Excellent polishing work. Furniture looks brand new!" }],
+            },
+            {
+              id: "duco",
+              title: "Duco",
+              description: "Premium Duco finishing services for a smooth and durable surface.",
+              images: ["https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&h=600&fit=crop"],
+              gallery: ["https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&h=600&fit=crop"],
+              feedbacks: [{ name: "Priya Sharma", rating: 5, comment: "Beautiful Duco finish. Very satisfied!" }],
+            },
+            {
+              id: "pu",
+              title: "PU",
+              description: "High-quality PU coating services for enhanced durability and protection.",
+              images: ["https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=800&h=600&fit=crop"],
+              gallery: ["https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=800&h=600&fit=crop"],
+              feedbacks: [{ name: "Vikram Singh", rating: 5, comment: "Great PU coating. Very durable!" }],
+            },
           ],
         },
         {
-          id: "pu-coating",
-          title: "PU Coating for Furniture & Doors",
-          description: "Durable PU coating that protects and enhances the appearance of your wooden furniture and doors.",
+          id: "wood-works",
+          title: "Wood Works",
+          description: "Custom wood work solutions for all your furniture and carpentry needs.",
           images: [
-            "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&h=600&fit=crop",
+            "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=800&h=600&fit=crop",
           ],
           gallery: [
-            "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&h=600&fit=crop",
+            "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=800&h=600&fit=crop",
           ],
-          feedbacks: [
-            { name: "Sunita Agarwal", rating: 5, comment: "Excellent PU coating work. Very durable finish." },
+          feedbacks: [],
+          nestedSubcategories: [
+            {
+              id: "modular-furniture",
+              title: "Modular Furniture",
+              description: "Custom modular furniture solutions tailored to your space and needs.",
+              images: ["https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=800&h=600&fit=crop"],
+              gallery: ["https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=800&h=600&fit=crop"],
+              feedbacks: [{ name: "Priya Sharma", rating: 5, comment: "Beautiful modular furniture. Perfect fit!" }],
+            },
+            {
+              id: "custom-carpentry",
+              title: "Custom Carpentry",
+              description: "Expert carpentry services for custom furniture and built-in solutions.",
+              images: ["https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=800&h=600&fit=crop"],
+              gallery: ["https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=800&h=600&fit=crop"],
+              feedbacks: [{ name: "Vikram Singh", rating: 5, comment: "Amazing custom carpentry work!" }],
+            },
+            {
+              id: "wardrobes",
+              title: "Wardrobes",
+              description: "Custom wardrobe solutions designed to maximize your storage space.",
+              images: ["https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=800&h=600&fit=crop"],
+              gallery: ["https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=800&h=600&fit=crop"],
+              feedbacks: [{ name: "Anita Mehta", rating: 5, comment: "Perfect wardrobes. Great storage solutions!" }],
+            },
+            {
+              id: "kitchen-wood",
+              title: "Kitchen",
+              description: "Custom kitchen cabinets and wood work solutions.",
+              images: ["https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=800&h=600&fit=crop"],
+              gallery: ["https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=800&h=600&fit=crop"],
+              feedbacks: [{ name: "Rahul Mehta", rating: 5, comment: "Beautiful kitchen cabinets!" }],
+            },
           ],
         },
         {
-          id: "furniture-refurbishing",
-          title: "Refurbishing Old Furniture",
-          description: "Transform your old furniture into stunning pieces with our expert refurbishing services.",
+          id: "fixed-installation",
+          title: "Fixed Installation",
+          description: "Professional fixed installation services for storage units, wall panels, and electrical units.",
           images: [
-            "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=800&h=600&fit=crop",
+            "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=800&h=600&fit=crop",
           ],
           gallery: [
-            "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=800&h=600&fit=crop",
+            "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=800&h=600&fit=crop",
           ],
-          feedbacks: [
-            { name: "Rajesh Kumar", rating: 5, comment: "Amazing transformation of our old furniture!" },
+          feedbacks: [],
+          nestedSubcategories: [
+            {
+              id: "storage-units",
+              title: "Storage Units",
+              description: "Custom storage unit installations for optimal space utilization.",
+              images: ["https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=800&h=600&fit=crop"],
+              gallery: ["https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=800&h=600&fit=crop"],
+              feedbacks: [{ name: "Sneha Patel", rating: 5, comment: "Great storage solutions!" }],
+            },
+            {
+              id: "wall-panels",
+              title: "Wall Panels",
+              description: "Modern wall panel installations for enhanced aesthetics.",
+              images: ["https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=800&h=600&fit=crop"],
+              gallery: ["https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=800&h=600&fit=crop"],
+              feedbacks: [{ name: "Amit Singh", rating: 5, comment: "Beautiful wall panels!" }],
+            },
+            {
+              id: "electrical-units",
+              title: "Electrical Units",
+              description: "Fixed electrical unit installations and integrations.",
+              images: ["https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=800&h=600&fit=crop"],
+              gallery: ["https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=800&h=600&fit=crop"],
+              feedbacks: [{ name: "Rajesh Kumar", rating: 5, comment: "Professional electrical installations!" }],
+            },
           ],
         },
       ],
     },
     {
       id: 3,
-      icon: <HammerIcon />,
-      title: "Interior Civil & Renovation",
-      description: "Complete renovation solutions to transform your existing spaces.",
-      bgGradient: "from-stone-100 to-neutral-50",
+      icon: <PaintBrushIcon />,
+      title: "Surfaces Finishes",
+      description: "Premium surface finishing solutions including painting and flooring services.",
+      bgGradient: "from-amber-100 to-orange-50",
+      imagePath: "/service-3.png",
       subcategories: [
         {
-          id: "false-ceiling",
-          title: "False Ceiling Installation",
-          description: "Modern false ceiling designs that enhance the aesthetics and functionality of your space.",
+          id: "painting-services",
+          title: "Painting Services",
+          description: "Comprehensive painting solutions for interior and exterior surfaces.",
           images: [
-            "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=800&h=600&fit=crop",
-            "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=800&h=600&fit=crop",
+            "https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=800&h=600&fit=crop",
           ],
           gallery: [
-            "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=800&h=600&fit=crop",
-            "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=800&h=600&fit=crop",
+            "https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=800&h=600&fit=crop",
           ],
-          feedbacks: [
-            { name: "Anita Mehta", rating: 5, comment: "Beautiful false ceiling work. Very professional!" },
+          feedbacks: [],
+          nestedSubcategories: [
+            {
+              id: "interior-painting",
+              title: "Interior Painting",
+              description: "Professional interior painting services using premium quality paints.",
+              images: [
+                "https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=800&h=600&fit=crop",
+                "https://images.unsplash.com/photo-1560185127-6ed189bf02f4?w=800&h=600&fit=crop",
+              ],
+              gallery: [
+                "https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=800&h=600&fit=crop",
+                "https://images.unsplash.com/photo-1560185127-6ed189bf02f4?w=800&h=600&fit=crop",
+              ],
+              feedbacks: [
+                { name: "Rahul Mehta", rating: 5, comment: "Excellent work! The team was professional and the finish is flawless." },
+                { name: "Sneha Patel", rating: 5, comment: "Love the color choices. The painting quality exceeded our expectations." },
+              ],
+            },
+            {
+              id: "exterior-painting",
+              title: "Exterior Painting",
+              description: "Weather-resistant exterior painting that protects and beautifies your home.",
+              images: [
+                "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&h=600&fit=crop",
+              ],
+              gallery: [
+                "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&h=600&fit=crop",
+              ],
+              feedbacks: [
+                { name: "Amit Singh", rating: 5, comment: "Great exterior paint job. Withstood monsoon perfectly!" },
+              ],
+            },
+            {
+              id: "texture-paint",
+              title: "Texture Paint",
+              description: "Create stunning feature walls with textured paints.",
+              images: [
+                "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=800&h=600&fit=crop",
+              ],
+              gallery: [
+                "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=800&h=600&fit=crop",
+              ],
+              feedbacks: [
+                { name: "Vikram Singh", rating: 5, comment: "The texture wall in our living room is absolutely stunning!" },
+              ],
+            },
+            {
+              id: "waterproof-coatings",
+              title: "Water Proof Coatings",
+              description: "Protect your walls from moisture and water damage.",
+              images: [
+                "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=800&h=600&fit=crop",
+              ],
+              gallery: [
+                "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=800&h=600&fit=crop",
+              ],
+              feedbacks: [
+                { name: "Priya Sharma", rating: 5, comment: "No more leakage issues. Excellent waterproofing work!" },
+              ],
+            },
           ],
         },
         {
-          id: "tiling-flooring",
-          title: "Tiling & Flooring",
-          description: "Premium tiling and flooring solutions for all your interior and exterior needs.",
+          id: "flooring",
+          title: "Flooring",
+          description: "Premium flooring solutions for all your interior and exterior needs.",
           images: [
             "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=800&h=600&fit=crop",
           ],
           gallery: [
             "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=800&h=600&fit=crop",
           ],
-          feedbacks: [
-            { name: "Vikram Singh", rating: 5, comment: "Perfect tiling work. Very satisfied!" },
-          ],
-        },
-        {
-          id: "carpentry",
-          title: "Carpentry (Wardrobes, Kitchen)",
-          description: "Custom carpentry solutions including wardrobes, kitchen cabinets, and built-in furniture.",
-          images: [
-            "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=800&h=600&fit=crop",
-          ],
-          gallery: [
-            "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=800&h=600&fit=crop",
-          ],
-          feedbacks: [
-            { name: "Priya Sharma", rating: 5, comment: "Beautiful custom wardrobes. Exactly as we wanted!" },
+          feedbacks: [],
+          nestedSubcategories: [
+            {
+              id: "tile-flooring",
+              title: "Tile Flooring",
+              description: "Premium tile flooring solutions for all spaces.",
+              images: ["https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=800&h=600&fit=crop"],
+              gallery: ["https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=800&h=600&fit=crop"],
+              feedbacks: [{ name: "Vikram Singh", rating: 5, comment: "Perfect tiling work. Very satisfied!" }],
+            },
+            {
+              id: "wooden-flooring",
+              title: "Wooden Flooring",
+              description: "Beautiful wooden flooring solutions.",
+              images: ["https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=800&h=600&fit=crop"],
+              gallery: ["https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=800&h=600&fit=crop"],
+              feedbacks: [{ name: "Anita Mehta", rating: 5, comment: "Beautiful wooden floors!" }],
+            },
+            {
+              id: "marble-granite",
+              title: "Marble & Granite",
+              description: "Premium marble and granite flooring solutions.",
+              images: ["https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=800&h=600&fit=crop"],
+              gallery: ["https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=800&h=600&fit=crop"],
+              feedbacks: [{ name: "Sunita Agarwal", rating: 5, comment: "Stunning marble work!" }],
+            },
+            {
+              id: "vinyl-laminate",
+              title: "Vinyl & Laminate",
+              description: "Modern vinyl and laminate flooring options.",
+              images: ["https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=800&h=600&fit=crop"],
+              gallery: ["https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=800&h=600&fit=crop"],
+              feedbacks: [{ name: "Rajesh Kumar", rating: 5, comment: "Great vinyl flooring!" }],
+            },
           ],
         },
       ],
     },
     {
       id: 4,
-      icon: <SparklesIcon />,
-      title: "Design & Turnkey Interiors",
-      description: "Complete design + build solutions from concept to completion.",
-      bgGradient: "from-rose-50 to-amber-50",
-      comingSoon: true,
-      subcategories: [],
+      icon: <HammerIcon />,
+      title: "Upgrades & Renovations",
+      description: "Complete renovation and upgrade solutions for homes and commercial spaces.",
+      bgGradient: "from-stone-100 to-neutral-50",
+      imagePath: "/service-4.png",
+      subcategories: [
+        {
+          id: "full-home-renovation",
+          title: "Full Home Renovation",
+          description: "Complete home renovation services from concept to completion.",
+          images: [
+            "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&h=600&fit=crop",
+          ],
+          gallery: [
+            "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&h=600&fit=crop",
+          ],
+          feedbacks: [],
+          nestedSubcategories: [
+            {
+              id: "partial-remodeling",
+              title: "Partial Remodeling",
+              description: "Targeted remodeling solutions for specific areas.",
+              images: ["https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&h=600&fit=crop"],
+              gallery: ["https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&h=600&fit=crop"],
+              feedbacks: [{ name: "Priya Sharma", rating: 5, comment: "Excellent partial renovation!" }],
+            },
+            {
+              id: "commercial-space",
+              title: "Commercial Space",
+              description: "Complete commercial space renovation services.",
+              images: ["https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&h=600&fit=crop"],
+              gallery: ["https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&h=600&fit=crop"],
+              feedbacks: [{ name: "Rajesh Kumar", rating: 5, comment: "Great commercial renovation!" }],
+            },
+            {
+              id: "bars-shops-restaurant",
+              title: "Bars & Shops & Restaurant",
+              description: "Specialized renovation services for bars, shops, and restaurants.",
+              images: ["https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&h=600&fit=crop"],
+              gallery: ["https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&h=600&fit=crop"],
+              feedbacks: [{ name: "Sunita Agarwal", rating: 5, comment: "Amazing restaurant renovation!" }],
+            },
+            {
+              id: "showrooms",
+              title: "Showrooms",
+              description: "Professional showroom renovation and design services.",
+              images: ["https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&h=600&fit=crop"],
+              gallery: ["https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&h=600&fit=crop"],
+              feedbacks: [{ name: "Vikram Singh", rating: 5, comment: "Beautiful showroom design!" }],
+            },
+            {
+              id: "residential-area",
+              title: "Residential Area",
+              description: "Complete residential area renovation services.",
+              images: ["https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&h=600&fit=crop"],
+              gallery: ["https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&h=600&fit=crop"],
+              feedbacks: [{ name: "Anita Mehta", rating: 5, comment: "Excellent residential renovation!" }],
+            },
+            {
+              id: "bedroom",
+              title: "Bedroom",
+              description: "Specialized bedroom renovation and design services.",
+              images: ["https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&h=600&fit=crop"],
+              gallery: ["https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&h=600&fit=crop"],
+              feedbacks: [{ name: "Rahul Mehta", rating: 5, comment: "Beautiful bedroom renovation!" }],
+            },
+            {
+              id: "bathroom",
+              title: "Bathroom",
+              description: "Complete bathroom renovation and upgrade services.",
+              images: ["https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&h=600&fit=crop"],
+              gallery: ["https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&h=600&fit=crop"],
+              feedbacks: [{ name: "Sneha Patel", rating: 5, comment: "Stunning bathroom renovation!" }],
+            },
+            {
+              id: "kitchen-renovation",
+              title: "Kitchen",
+              description: "Complete kitchen renovation and design services.",
+              images: ["https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&h=600&fit=crop"],
+              gallery: ["https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&h=600&fit=crop"],
+              feedbacks: [{ name: "Amit Singh", rating: 5, comment: "Amazing kitchen renovation!" }],
+            },
+            {
+              id: "dining-room",
+              title: "Dining Room",
+              description: "Dining room renovation and design services.",
+              images: ["https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&h=600&fit=crop"],
+              gallery: ["https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&h=600&fit=crop"],
+              feedbacks: [{ name: "Priya Sharma", rating: 5, comment: "Beautiful dining room!" }],
+            },
+            {
+              id: "living-room",
+              title: "Living Room",
+              description: "Living room renovation and design services.",
+              images: ["https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&h=600&fit=crop"],
+              gallery: ["https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&h=600&fit=crop"],
+              feedbacks: [{ name: "Rajesh Kumar", rating: 5, comment: "Stunning living room renovation!" }],
+            },
+          ],
+        },
+        {
+          id: "flat",
+          title: "Flat",
+          description: "Complete flat renovation and upgrade services.",
+          images: [
+            "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&h=600&fit=crop",
+          ],
+          gallery: [
+            "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&h=600&fit=crop",
+          ],
+          feedbacks: [
+            { name: "Vikram Singh", rating: 5, comment: "Excellent flat renovation work!" },
+          ],
+        },
+        {
+          id: "terrace",
+          title: "Terrace",
+          description: "Terrace renovation and upgrade services.",
+          images: [
+            "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&h=600&fit=crop",
+          ],
+          gallery: [
+            "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&h=600&fit=crop",
+          ],
+          feedbacks: [
+            { name: "Anita Mehta", rating: 5, comment: "Beautiful terrace renovation!" },
+          ],
+        },
+        {
+          id: "corporate-areas",
+          title: "Corporate Areas",
+          description: "Professional corporate space renovation and design services.",
+          images: [
+            "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&h=600&fit=crop",
+          ],
+          gallery: [
+            "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&h=600&fit=crop",
+          ],
+          feedbacks: [
+            { name: "Sunita Agarwal", rating: 5, comment: "Excellent corporate renovation!" },
+          ],
+        },
+      ],
     },
   ];
 
   const toggleService = (serviceId: number) => {
-    if (services.find(s => s.id === serviceId)?.comingSoon) return;
     setSelectedServices(prev =>
       prev.includes(serviceId)
         ? prev.filter(id => id !== serviceId)
@@ -766,24 +1076,46 @@ function Services() {
     return selectedSubcategories.some(s => s.serviceId === serviceId && s.subcategoryId === subcategoryId);
   };
 
-  const handleRegistration = (e: React.FormEvent) => {
+  const handleRegistration = async (e: React.FormEvent) => {
     e.preventDefault();
     const selectedServicesList = services
       .filter(s => selectedServices.includes(s.id))
       .map(s => s.title)
       .join(", ");
-    
-    const message = `Hi, I'm ${registrationData.name}. I'm interested in: ${selectedServicesList}. ${registrationData.message}. Please contact me at ${registrationData.phone} or ${registrationData.email}.`;
-    window.open(`https://wa.me/919999999999?text=${encodeURIComponent(message)}`, '_blank');
-    
-    // Reset form
-    setSelectedServices([]);
-    setSelectedSubcategories([]);
-    setRegistrationData({ name: "", phone: "", email: "", message: "" });
-    setShowRegistration(false);
+
+    try {
+      // Record in DB
+      const res = await fetch('/api/bookings', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: registrationData.name,
+          email: registrationData.email,
+          phone: registrationData.phone,
+          service: selectedServicesList,
+          message: registrationData.message,
+          status: 'requested'
+        })
+      });
+
+      if (!res.ok) throw new Error('Failed to save registration');
+
+      // Also open WhatsApp as before (optional, preserving existing behavior)
+      const message = `Hi, I'm ${registrationData.name}. I'm interested in: ${selectedServicesList}. ${registrationData.message}. Please contact me at ${registrationData.phone} or ${registrationData.email}.`;
+      window.open(`https://wa.me/919999999999?text=${encodeURIComponent(message)}`, '_blank');
+
+      // Reset form
+      setSelectedServices([]);
+      setSelectedSubcategories([]);
+      setRegistrationData({ name: "", phone: "", email: "", message: "" });
+      setShowRegistration(false);
+    } catch (error) {
+      console.error(error);
+      alert('Failed to register. Please try again.');
+    }
   };
 
-  const handleBooking = (e: React.FormEvent) => {
+  const handleBooking = async (e: React.FormEvent) => {
     e.preventDefault();
     if (bookingStep === 'form') {
       setBookingStep('contract');
@@ -793,29 +1125,84 @@ function Services() {
         ...services.filter(s => selectedServices.includes(s.id)).map(s => s.title),
         ...selectedSubcategories.map(sc => {
           const service = services.find(s => s.id === sc.serviceId);
-          const subcat = service?.subcategories?.find(sub => sub.id === sc.subcategoryId);
+          let subcat = service?.subcategories?.find(sub => sub.id === sc.subcategoryId);
+
+          // If not found in direct subcategories, search in nested subcategories
+          if (!subcat) {
+            for (const sub of service?.subcategories || []) {
+              if ('nestedSubcategories' in sub && sub.nestedSubcategories && Array.isArray(sub.nestedSubcategories)) {
+                const nested = (sub.nestedSubcategories as any[]).find(n => n.id === sc.subcategoryId);
+                if (nested) {
+                  subcat = nested;
+                  break;
+                }
+              }
+            }
+          }
+
           return `${service?.title} - ${subcat?.title}`;
         })
       ];
-      
-      setBookingData(prev => ({ ...prev, services: selectedItems }));
-      setBookingReference(generateBookingReference());
-      console.log('Booking submitted:', { ...bookingData, services: selectedItems });
-      setBookingStep('success');
+
+      const fullBookingData = { ...bookingData, services: selectedItems };
+
+      try {
+        const res = await fetch('/api/bookings', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            name: fullBookingData.name,
+            email: fullBookingData.email,
+            phone: fullBookingData.phone,
+            service: selectedItems.join(', '),
+            message: `Address: ${fullBookingData.address || 'N/A'}. Budget: ${fullBookingData.budget || 'N/A'}.`,
+            status: 'requested',
+          }),
+        });
+
+        if (!res.ok) {
+          const errData = await res.json();
+          throw new Error(errData.error || 'Failed to submit booking');
+        }
+
+        const data = await res.json();
+
+        setBookingData(prev => ({ ...prev, services: selectedItems }));
+        setBookingReference(generateBookingReference());
+        console.log('Booking submitted:', data);
+        setBookingStep('success');
+      } catch (error: any) {
+        console.error(error);
+        alert(error.message || 'Something went wrong. Please try again.');
+      }
     }
   };
 
-  const getSelectedSubcategory = () => {
+  const getSelectedSubcategory = (): any => {
     if (!showSubcategoryDetail) return null;
     const service = services.find(s => s.id === showSubcategoryDetail.serviceId);
-    return service?.subcategories?.find(sub => sub.id === showSubcategoryDetail.subcategoryId);
+    if (!service) return null;
+
+    // First check direct subcategories
+    const directSub = service.subcategories?.find(sub => sub.id === showSubcategoryDetail.subcategoryId);
+    if (directSub) return directSub;
+
+    // Then check nested subcategories
+    for (const subcat of service.subcategories || []) {
+      if ('nestedSubcategories' in subcat && subcat.nestedSubcategories && Array.isArray(subcat.nestedSubcategories)) {
+        const nested = (subcat.nestedSubcategories as Array<{ id: string; title: string; description: string; images: string[]; feedbacks: Array<{ name: string; rating: number; comment: string }> }>).find(n => n.id === showSubcategoryDetail.subcategoryId);
+        if (nested) return nested;
+      }
+    }
+
+    return null;
   };
 
   return (
     <section id="services" className="section-padding bg-cream relative">
       {/* Background Pattern */}
       <div className="absolute inset-0 pattern-overlay opacity-20"></div>
-      
+
       <div className="max-w-7xl mx-auto px-6 lg:px-8 relative">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
@@ -827,62 +1214,56 @@ function Services() {
             Comprehensive interior solutions tailored to your needs. We serve homes and businesses across the city with execution-focused services.
           </p>
         </div>
-        
+
         {/* Services Catalogue Grid */}
         <div ref={ref} className="space-y-12">
           {services.map((service, index) => {
             const isSelected = selectedServices.includes(service.id);
-            const canSelect = !service.comingSoon;
-            
+
             return (
               <div
                 key={service.id}
-                onClick={() => canSelect && toggleService(service.id)}
-                className={`relative bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer ${
-                  service.comingSoon ? 'opacity-90' : ''
-                } ${
-                  isSelected ? 'ring-4 ring-caramel ring-offset-2' : ''
-                } scroll-fade-in ${isVisible ? 'visible' : ''}`}
+                onClick={() => toggleService(service.id)}
+                className={`relative bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer ${isSelected ? 'ring-4 ring-caramel ring-offset-2' : ''
+                  } scroll-fade-in ${isVisible ? 'visible' : ''}`}
                 style={{ transitionDelay: `${index * 0.15}s` }}
               >
                 {/* Selection Checkbox */}
-                {canSelect && (
-                  <div className="absolute top-4 right-4 z-20">
-                    <div className={`w-12 h-12 rounded-full flex items-center justify-center transition-all ${
-                      isSelected 
-                        ? 'bg-caramel text-white shadow-lg scale-110' 
-                        : 'bg-white/90 text-coffee shadow-md hover:scale-110'
+                <div className="absolute top-4 right-4 z-20">
+                  <div className={`w-12 h-12 rounded-full flex items-center justify-center transition-all ${isSelected
+                    ? 'bg-caramel text-white shadow-lg scale-110'
+                    : 'bg-white/90 text-coffee shadow-md hover:scale-110'
                     }`}>
-                      <CheckboxIcon checked={isSelected} />
-                    </div>
+                    <CheckboxIcon checked={isSelected} />
                   </div>
-                )}
-                
+                </div>
+
                 <div className={`grid lg:grid-cols-2 ${index % 2 === 1 ? 'lg:flex-row-reverse' : ''}`}>
                   {/* Image Section */}
                   <div className={`relative h-72 lg:h-auto min-h-[320px] ${index % 2 === 1 ? 'lg:order-2' : ''}`}>
-                    <div className={`absolute inset-0 bg-gradient-to-br ${service.bgGradient} ${isSelected ? 'opacity-90' : ''}`}>
-                      {/* Placeholder with icon for demonstration */}
-                      <div className="absolute inset-0 flex items-center justify-center">
-                        <div className="text-center">
-                          <div className={`w-20 h-20 mx-auto mb-4 rounded-2xl bg-white/80 backdrop-blur flex items-center justify-center text-caramel shadow-lg interactive-icon hover-lift ${
-                            isSelected ? 'scale-110' : ''
-                          }`}>
-                            {service.icon}
-                          </div>
-                          <p className="text-coffee/60 text-sm font-medium">Premium Quality</p>
-                        </div>
+                    {/* Image Container with Actual Image */}
+                    <div className="absolute inset-0 overflow-hidden">
+                      <img
+                        src={service.imagePath}
+                        alt={service.title}
+                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                      />
+                      {/* Gradient overlay to ensure text readability and match aesthetic */}
+                      <div className={`absolute inset-0 bg-gradient-to-br ${service.bgGradient} opacity-30 mix-blend-multiply`}></div>
+                      <div className="absolute inset-0 bg-black/20"></div>
+                    </div>
+
+                    {/* Placeholder with icon - simplified and moved to a small corner bubble or kept as is if desired */}
+                    <div className="absolute top-6 left-6 z-10">
+                      <div className={`w-12 h-12 rounded-xl bg-white/90 backdrop-blur flex items-center justify-center text-caramel shadow-lg interactive-icon hover-lift ${isSelected ? 'scale-110' : ''
+                        }`}>
+                        {service.icon}
                       </div>
                     </div>
-                    {/* Decorative overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
-                    
-                    {service.comingSoon && (
-                      <div className="absolute top-4 left-4 bg-gold text-white text-xs font-bold px-4 py-2 rounded-full shadow-lg">
-                        COMING SOON
-                      </div>
-                    )}
-                    
+
+                    {/* Decorative bottom gradient */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
+
                     {/* Selected overlay */}
                     {isSelected && (
                       <div className="absolute inset-0 bg-caramel/20 flex items-center justify-center">
@@ -892,7 +1273,7 @@ function Services() {
                       </div>
                     )}
                   </div>
-                  
+
                   {/* Content Section */}
                   <div className={`p-8 lg:p-12 flex flex-col justify-center ${index % 2 === 1 ? 'lg:order-1' : ''}`}>
                     {/* Title & Description */}
@@ -902,79 +1283,78 @@ function Services() {
                     <p className="text-coffee/70 mb-6 text-lg">
                       {service.description}
                     </p>
-                    
+
                     {/* Subcategories Grid */}
                     {service.subcategories && service.subcategories.length > 0 && (
                       <div className="mb-8">
                         <p className="text-sm font-medium text-coffee/70 mb-4">Select Subcategories:</p>
                         <div className="grid md:grid-cols-2 gap-4">
-                          {service.subcategories.map((subcat, subIndex) => {
+                          {service.subcategories.map((subcat) => {
                             const isSubSelected = isSubcategorySelected(service.id, subcat.id);
+                            const hasNested = subcat.nestedSubcategories && subcat.nestedSubcategories.length > 0;
                             return (
-                              <div
-                                key={subcat.id}
-                                onClick={(e) => toggleSubcategory(service.id, subcat.id, e)}
-                                className={`relative rounded-xl overflow-hidden cursor-pointer transition-all hover:scale-105 ${
-                                  isSubSelected ? 'ring-2 ring-caramel' : 'ring-2 ring-transparent'
-                                }`}
-                              >
-                                {/* Subcategory Image */}
-                                <div className="relative h-32">
-                                  <div
-                                    className="w-full h-full bg-cover bg-center"
-                                    style={{ backgroundImage: `url(${subcat.images[0]})` }}
-                                  />
-                                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                                  
-                                  {/* Selection Checkbox */}
-                                  <div className="absolute top-2 right-2">
-                                    <div className={`w-8 h-8 rounded-full flex items-center justify-center transition-all ${
-                                      isSubSelected 
-                                        ? 'bg-caramel text-white shadow-lg' 
+                              <div key={subcat.id} className="space-y-3">
+                                <div
+                                  onClick={(e) => toggleSubcategory(service.id, subcat.id, e)}
+                                  className={`relative rounded-xl overflow-hidden cursor-pointer transition-all hover:scale-105 ${isSubSelected ? 'ring-2 ring-caramel' : 'ring-2 ring-transparent'
+                                    }`}
+                                >
+                                  {/* Subcategory Image */}
+                                  <div className="relative h-32">
+                                    <div
+                                      className="w-full h-full bg-cover bg-center"
+                                      style={{ backgroundImage: `url(${subcat.images[0]})` }}
+                                    />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+
+                                    {/* Selection Checkbox */}
+                                    <div className="absolute top-2 right-2">
+                                      <div className={`w-8 h-8 rounded-full flex items-center justify-center transition-all ${isSubSelected
+                                        ? 'bg-caramel text-white shadow-lg'
                                         : 'bg-white/90 text-coffee shadow-md'
-                                    }`}>
-                                      <CheckboxIcon checked={isSubSelected} />
+                                        }`}>
+                                        <CheckboxIcon checked={isSubSelected} />
+                                      </div>
+                                    </div>
+
+                                    {/* Title */}
+                                    <div className="absolute bottom-0 left-0 right-0 p-3">
+                                      <h4 className="text-white font-semibold text-sm">{subcat.title}</h4>
                                     </div>
                                   </div>
-                                  
-                                  {/* Title */}
-                                  <div className="absolute bottom-0 left-0 right-0 p-3">
-                                    <h4 className="text-white font-semibold text-sm">{subcat.title}</h4>
+
+                                  {/* Explore Button */}
+                                  <div className="p-3 bg-white">
+                                    <button
+                                      onClick={(e) => {
+                                        e.stopPropagation();
+                                        setShowSubcategoryDetail({ serviceId: service.id, subcategoryId: subcat.id });
+                                      }}
+                                      className="w-full text-xs text-caramel hover:text-coffee font-medium text-center"
+                                    >
+                                      Explore Details →
+                                    </button>
                                   </div>
                                 </div>
-                                
-                                {/* Explore Button */}
-                                <div className="p-3 bg-white">
-                                  <button
-                                    onClick={(e) => {
-                                      e.stopPropagation();
-                                      setShowSubcategoryDetail({ serviceId: service.id, subcategoryId: subcat.id });
-                                    }}
-                                    className="w-full text-xs text-caramel hover:text-coffee font-medium text-center"
-                                  >
-                                    Explore Details →
-                                  </button>
-                                </div>
+
                               </div>
                             );
                           })}
                         </div>
                       </div>
                     )}
-                    
+
                     {/* Selection Hint */}
-                    {canSelect && (
-                      <div className="text-sm text-coffee/60 italic">
-                        {isSelected ? "✓ Service selected" : "Click to select this service category"}
-                      </div>
-                    )}
+                    <div className="text-sm text-coffee/60 italic">
+                      {isSelected ? "✓ Service selected" : "Click to select this service category"}
+                    </div>
                   </div>
                 </div>
               </div>
             );
           })}
         </div>
-        
+
         {/* Selected Services Summary & Registration */}
         {(selectedServices.length > 0 || selectedSubcategories.length > 0) && (
           <div className="mt-16 bg-white rounded-3xl p-8 shadow-xl scroll-fade-in">
@@ -995,7 +1375,7 @@ function Services() {
                 Clear All
               </button>
             </div>
-            
+
             {/* Selected Services & Subcategories List */}
             <div className="space-y-4 mb-8">
               {/* Services */}
@@ -1030,7 +1410,7 @@ function Services() {
                   </div>
                 </div>
               )}
-              
+
               {/* Subcategories */}
               {selectedSubcategories.length > 0 && (
                 <div>
@@ -1073,7 +1453,7 @@ function Services() {
                 </div>
               )}
             </div>
-            
+
             {/* Action Buttons */}
             <div className="flex flex-col sm:flex-row gap-4">
               <button
@@ -1091,7 +1471,21 @@ function Services() {
                       ...services.filter(s => selectedServices.includes(s.id)).map(s => s.title),
                       ...selectedSubcategories.map(sc => {
                         const service = services.find(s => s.id === sc.serviceId);
-                        const subcat = service?.subcategories?.find(sub => sub.id === sc.subcategoryId);
+                        let subcat = service?.subcategories?.find(sub => sub.id === sc.subcategoryId);
+
+                        // If not found in direct subcategories, search in nested subcategories
+                        if (!subcat) {
+                          for (const sub of service?.subcategories || []) {
+                            if ('nestedSubcategories' in sub && sub.nestedSubcategories && Array.isArray(sub.nestedSubcategories)) {
+                              const nested = (sub.nestedSubcategories as any[]).find(n => n.id === sc.subcategoryId);
+                              if (nested) {
+                                subcat = nested;
+                                break;
+                              }
+                            }
+                          }
+                        }
+
                         return `${service?.title} - ${subcat?.title}`;
                       })
                     ]
@@ -1107,7 +1501,7 @@ function Services() {
             </div>
           </div>
         )}
-        
+
         {/* Bottom CTA */}
         <div className="mt-16 text-center">
           <div className="inline-flex flex-col items-center bg-white rounded-2xl px-10 py-8 shadow-lg">
@@ -1125,8 +1519,21 @@ function Services() {
                           ...services.filter(s => selectedServices.includes(s.id)).map(s => s.title),
                           ...selectedSubcategories.map(sc => {
                             const service = services.find(s => s.id === sc.serviceId);
-                            const subcat = service?.subcategories?.find(sub => sub.id === sc.subcategoryId);
-                            return `${service?.title} - ${subcat?.title}`;
+                            let subcat = service?.subcategories?.find(sub => sub.id === sc.subcategoryId);
+                            if (!subcat) {
+                              for (const sub of service?.subcategories || []) {
+                                if ('nestedSubcategories' in sub && sub.nestedSubcategories) {
+                                  const nested = (sub.nestedSubcategories as any[]).find(n => n.id === sc.subcategoryId);
+                                  if (nested) {
+                                    subcat = nested;
+                                    break;
+                                  }
+                                }
+                              }
+                            }
+                            if (service && subcat) return `${service.title} – ${subcat.title}`;
+                            if (service) return service.title;
+                            return '';
                           })
                         ]
                       });
@@ -1146,8 +1553,21 @@ function Services() {
                           ...services.filter(s => selectedServices.includes(s.id)).map(s => s.title),
                           ...selectedSubcategories.map(sc => {
                             const service = services.find(s => s.id === sc.serviceId);
-                            const subcat = service?.subcategories?.find(sub => sub.id === sc.subcategoryId);
-                            return `${service?.title} - ${subcat?.title}`;
+                            let subcat = service?.subcategories?.find(sub => sub.id === sc.subcategoryId);
+                            if (!subcat) {
+                              for (const sub of service?.subcategories || []) {
+                                if ('nestedSubcategories' in sub && sub.nestedSubcategories) {
+                                  const nested = (sub.nestedSubcategories as any[]).find(n => n.id === sc.subcategoryId);
+                                  if (nested) {
+                                    subcat = nested;
+                                    break;
+                                  }
+                                }
+                              }
+                            }
+                            if (service && subcat) return `${service.title} – ${subcat.title}`;
+                            if (service) return service.title;
+                            return '';
                           })
                         ]
                       });
@@ -1175,7 +1595,7 @@ function Services() {
           </div>
         </div>
       </div>
-      
+
       {/* Registration Modal */}
       {showRegistration && (
         <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4 animate-fade-in">
@@ -1191,7 +1611,7 @@ function Services() {
                 <CloseIcon />
               </button>
             </div>
-            
+
             <form onSubmit={handleRegistration} className="p-6 space-y-5">
               {/* Selected Services Summary */}
               <div className="bg-cream rounded-xl p-4 mb-6">
@@ -1218,7 +1638,7 @@ function Services() {
                   })}
                 </ul>
               </div>
-              
+
               <div>
                 <input
                   type="text"
@@ -1228,7 +1648,7 @@ function Services() {
                   onChange={(e) => setRegistrationData({ ...registrationData, name: e.target.value })}
                 />
               </div>
-              
+
               <div className="grid md:grid-cols-2 gap-5">
                 <input
                   type="tel"
@@ -1244,7 +1664,7 @@ function Services() {
                   onChange={(e) => setRegistrationData({ ...registrationData, email: e.target.value })}
                 />
               </div>
-              
+
               <div>
                 <textarea
                   placeholder="Tell us about your project requirements..."
@@ -1253,7 +1673,7 @@ function Services() {
                   onChange={(e) => setRegistrationData({ ...registrationData, message: e.target.value })}
                 ></textarea>
               </div>
-              
+
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
                 <button type="submit" className="btn-primary flex-1">
                   Submit Registration
@@ -1270,10 +1690,11 @@ function Services() {
           </div>
         </div>
       )}
-      
+
       {/* Subcategory Detail Modal */}
-      {showSubcategoryDetail && getSelectedSubcategory() && (() => {
-        const subcat = getSelectedSubcategory()!;
+      {showSubcategoryDetail && (() => {
+        const subcat = getSelectedSubcategory();
+        if (!subcat) return null as React.ReactNode;
         const service = services.find(s => s.id === showSubcategoryDetail!.serviceId);
         return (
           <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-start justify-center p-4 animate-fade-in overflow-y-auto">
@@ -1292,25 +1713,26 @@ function Services() {
                   <CloseIcon />
                 </button>
               </div>
-              
+
               <div className="p-6 space-y-8">
                 {/* Image Carousel */}
                 <div>
                   <ImageCarousel images={subcat.images} autoPlay={subcat.images.length > 1} />
                 </div>
-                
-                {/* Description */}
+
+
                 <div>
                   <h4 className="text-xl font-semibold text-charcoal mb-3">About This Service</h4>
-                  <p className="text-coffee/70 leading-relaxed">{subcat.description}</p>
+                  <p className="text-coffee/70 leading-relaxed">{subcat?.description}</p>
                 </div>
-                
+
+
                 {/* Work Gallery */}
-                {subcat.gallery && subcat.gallery.length > 0 && (
+                {'gallery' in subcat && subcat.gallery && Array.isArray(subcat.gallery) && subcat.gallery.length > 0 && (
                   <div>
                     <h4 className="text-xl font-semibold text-charcoal mb-4">Work Gallery</h4>
                     <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-                      {subcat.gallery.map((img, idx) => (
+                      {(subcat.gallery as string[]).map((img: string, idx: number) => (
                         <div
                           key={idx}
                           className="relative h-48 rounded-xl overflow-hidden hover:scale-105 transition-transform cursor-pointer"
@@ -1324,29 +1746,113 @@ function Services() {
                     </div>
                   </div>
                 )}
-                
-                {/* Feedbacks */}
-                {subcat.feedbacks && subcat.feedbacks.length > 0 && (
+
+                {/* Nested Subcategories */}
+                {'nestedSubcategories' in subcat && subcat.nestedSubcategories && Array.isArray(subcat.nestedSubcategories) && subcat.nestedSubcategories.length > 0 && (
                   <div>
-                    <h4 className="text-xl font-semibold text-charcoal mb-4">Client Feedback</h4>
-                    <div className="space-y-4">
-                      {subcat.feedbacks.map((feedback, idx) => (
-                        <div key={idx} className="bg-cream rounded-xl p-4">
-                          <div className="flex items-center gap-2 mb-2">
-                            <div className="flex text-gold">
-                              {[...Array(feedback.rating)].map((_, i) => (
-                                <StarIcon key={i} />
-                              ))}
+                    <h4 className="text-xl font-semibold text-charcoal mb-4">Nested Options</h4>
+                    <div className="space-y-3">
+                      {(subcat.nestedSubcategories as Array<{ id: string; title: string; description: string; images: string[]; feedbacks: Array<{ name: string; rating: number; comment: string }> }>).map((nested) => {
+                        const isNestedExpanded = expandedNestedSubcategories.has(nested.id);
+                        const isNestedSelected = isSubcategorySelected(service!.id, nested.id);
+                        return (
+                          <div key={nested.id} className="bg-cream rounded-xl overflow-hidden border border-sand/30">
+                            <div
+                              onClick={() => {
+                                setExpandedNestedSubcategories(prev => {
+                                  const newSet = new Set(prev);
+                                  if (newSet.has(nested.id)) {
+                                    newSet.delete(nested.id);
+                                  } else {
+                                    newSet.add(nested.id);
+                                  }
+                                  return newSet;
+                                });
+                              }}
+                              className="p-4 cursor-pointer hover:bg-sand/50 transition-colors flex items-center justify-between"
+                            >
+                              <div className="flex items-center gap-3">
+                                <div
+                                  onClick={(e) => {
+                                    e.stopPropagation();
+                                    toggleSubcategory(service!.id, nested.id, e);
+                                  }}
+                                  className={`w-6 h-6 rounded flex items-center justify-center transition-all ${isNestedSelected
+                                    ? 'bg-caramel text-white'
+                                    : 'bg-white border-2 border-sand'
+                                    }`}
+                                >
+                                  {isNestedSelected && <CheckIcon />}
+                                </div>
+                                <span className="font-medium text-charcoal">{nested.title}</span>
+                              </div>
+                              <div className="text-coffee/60">
+                                {isNestedExpanded ? <ChevronUpIcon /> : <ChevronDownIcon />}
+                              </div>
                             </div>
-                            <span className="font-semibold text-charcoal">{feedback.name}</span>
+
+                            {isNestedExpanded && (
+                              <div className="px-4 pb-4 space-y-4 animate-fade-in">
+                                <p className="text-sm text-coffee/70">{nested.description}</p>
+
+                                {nested.images && nested.images.length > 0 && (
+                                  <div className="grid grid-cols-2 gap-3">
+                                    {nested.images.map((img: string, idx: number) => (
+                                      <div
+                                        key={idx}
+                                        className="relative h-32 rounded-lg overflow-hidden"
+                                      >
+                                        <div
+                                          className="w-full h-full bg-cover bg-center"
+                                          style={{ backgroundImage: `url(${img})` }}
+                                        />
+                                      </div>
+                                    ))}
+                                  </div>
+                                )}
+
+                                {nested.feedbacks && nested.feedbacks.length > 0 && (
+                                  <div className="space-y-2">
+                                    {nested.feedbacks.map((feedback, idx: number) => (
+                                      <div key={idx} className="bg-white rounded-lg p-3">
+                                        <div className="flex items-center gap-2 mb-1">
+                                          <div className="flex text-gold">
+                                            {[...Array(feedback.rating)].map((_, i) => (
+                                              <StarIcon key={i} />
+                                            ))}
+                                          </div>
+                                          <span className="font-semibold text-charcoal text-sm">{feedback.name}</span>
+                                        </div>
+                                        <p className="text-coffee/70 text-xs">{feedback.comment}</p>
+                                      </div>
+                                    ))}
+                                  </div>
+                                )}
+
+                                <button
+                                  onClick={(e) => {
+                                    e.stopPropagation();
+                                    toggleSubcategory(service!.id, nested.id, e);
+                                  }}
+                                  className={`w-full text-sm py-2 rounded-lg font-medium transition-all ${isNestedSelected
+                                    ? 'bg-white text-caramel border-2 border-caramel'
+                                    : 'bg-caramel text-white hover:bg-caramel/90'
+                                    }`}
+                                >
+                                  {isNestedSelected ? 'Deselect' : 'Select This Option'}
+                                </button>
+                              </div>
+                            )}
                           </div>
-                          <p className="text-coffee/70 text-sm">{feedback.comment}</p>
-                        </div>
-                      ))}
+                        );
+                      })}
                     </div>
                   </div>
                 )}
-                
+
+                {/* Feedbacks - Removed as per request */}
+
+
                 {/* Action Buttons */}
                 <div className="flex flex-col sm:flex-row gap-4 pt-4 border-t border-sand">
                   <button
@@ -1354,10 +1860,9 @@ function Services() {
                       toggleSubcategory(showSubcategoryDetail.serviceId, showSubcategoryDetail.subcategoryId);
                       setShowSubcategoryDetail(null);
                     }}
-                    className={`flex-1 ${
-                      isSubcategorySelected(showSubcategoryDetail.serviceId, showSubcategoryDetail.subcategoryId)
-                        ? 'btn-secondary' : 'btn-primary'
-                    }`}
+                    className={`flex-1 ${isSubcategorySelected(showSubcategoryDetail.serviceId, showSubcategoryDetail.subcategoryId)
+                      ? 'btn-secondary' : 'btn-primary'
+                      }`}
                   >
                     {isSubcategorySelected(showSubcategoryDetail.serviceId, showSubcategoryDetail.subcategoryId)
                       ? 'Deselect' : 'Select This Service'}
@@ -1383,7 +1888,7 @@ function Services() {
           </div>
         );
       })()}
-      
+
       {/* Booking Flow Modal */}
       {showBooking && (
         <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-start justify-center p-4 animate-fade-in overflow-y-auto">
@@ -1405,7 +1910,7 @@ function Services() {
                     <CloseIcon />
                   </button>
                 </div>
-                
+
                 <form onSubmit={handleBooking} className="p-6 space-y-5">
                   <div className="bg-cream rounded-xl p-4 mb-6">
                     <p className="text-sm font-medium text-coffee mb-2">Selected Services:</p>
@@ -1418,7 +1923,7 @@ function Services() {
                       ))}
                     </ul>
                   </div>
-                  
+
                   <div>
                     <input
                       type="text"
@@ -1428,7 +1933,7 @@ function Services() {
                       onChange={(e) => setBookingData({ ...bookingData, name: e.target.value })}
                     />
                   </div>
-                  
+
                   <div className="grid md:grid-cols-2 gap-5">
                     <input
                       type="tel"
@@ -1445,7 +1950,7 @@ function Services() {
                       onChange={(e) => setBookingData({ ...bookingData, email: e.target.value })}
                     />
                   </div>
-                  
+
                   <div>
                     <textarea
                       placeholder="Complete Address *"
@@ -1455,7 +1960,7 @@ function Services() {
                       onChange={(e) => setBookingData({ ...bookingData, address: e.target.value })}
                     ></textarea>
                   </div>
-                  
+
                   <div>
                     <input
                       type="text"
@@ -1464,7 +1969,7 @@ function Services() {
                       onChange={(e) => setBookingData({ ...bookingData, budget: e.target.value })}
                     />
                   </div>
-                  
+
                   <div className="flex flex-col sm:flex-row gap-4 pt-4">
                     <button type="submit" className="btn-primary flex-1">
                       Continue to Contract
@@ -1485,7 +1990,7 @@ function Services() {
                 </form>
               </>
             )}
-            
+
             {bookingStep === 'contract' && (
               <>
                 <div className="sticky top-0 bg-white border-b border-sand p-6 flex items-center justify-between z-10">
@@ -1503,7 +2008,7 @@ function Services() {
                     <CloseIcon />
                   </button>
                 </div>
-                
+
                 <div className="p-6 space-y-6">
                   <div className="bg-cream rounded-xl p-6 max-h-96 overflow-y-auto">
                     <h4 className="font-semibold text-charcoal mb-4">Terms & Conditions</h4>
@@ -1518,20 +2023,20 @@ function Services() {
                       <p><strong>8. Changes:</strong> Any changes to the agreed scope will be discussed and may affect pricing and timeline.</p>
                     </div>
                   </div>
-                  
-                  <div className="flex items-start gap-3 p-4 bg-cream rounded-xl">
+
+                  <div className="w-full flex flex-row items-center justify-start p-2 bg-cream rounded-xl">
                     <input
                       type="checkbox"
                       id="contract-accept"
                       checked={contractAccepted}
                       onChange={(e) => setContractAccepted(e.target.checked)}
-                      className="mt-1 w-5 h-5 rounded border-sand text-caramel focus:ring-caramel"
+                      className="mt-1 w-5 h-5 focus:outline-none rounded border-sand text-caramel focus:ring-caramel"
                     />
-                    <label htmlFor="contract-accept" className="text-sm text-coffee cursor-pointer">
+                    <label htmlFor="contract-accept" className="text-sm w-[2500px] text-coffee cursor-pointer">
                       I have read and agree to the terms and conditions of this service contract. I understand that by proceeding, I am entering into a binding agreement with LV Interiors.
                     </label>
                   </div>
-                  
+
                   <div className="flex flex-col sm:flex-row gap-4 pt-4">
                     <button
                       onClick={handleBooking}
@@ -1551,7 +2056,7 @@ function Services() {
                 </div>
               </>
             )}
-            
+
             {bookingStep === 'success' && (
               <div className="p-12 text-center">
                 <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-green-100 flex items-center justify-center">
@@ -1567,10 +2072,10 @@ function Services() {
                   <p className="font-semibold text-charcoal mb-2">Booking Reference:</p>
                   <p className="text-coffee/70 text-sm">#{bookingReference}</p>
                   <p className="font-semibold text-charcoal mb-2 mt-4">Services:</p>
-                  <ul className="space-y-1">
+                  <ul className="space-y-2">
                     {bookingData.services.map((service, idx) => (
-                      <li key={idx} className="text-sm text-coffee flex items-center gap-2">
-                        <span className="w-1.5 h-1.5 rounded-full bg-caramel"></span>
+                      <li key={idx} className="flex items-center gap-2 text-coffee/90 text-sm">
+                        <span className="w-2 h-2 rounded-full bg-caramel flex-shrink-0"></span>
                         {service}
                       </li>
                     ))}
@@ -1581,10 +2086,13 @@ function Services() {
                     setShowBooking(false);
                     setBookingStep('form');
                     setContractAccepted(false);
-                    setBookingData({ name: "", phone: "", email: "", address: "", budget: "", services: [] });
                     setBookingReference("");
-                    setSelectedServices([]);
-                    setSelectedSubcategories([]);
+                    // Clear selected services/subcategories and booking data after a small delay to allow success screen to render
+                    setTimeout(() => {
+                      setSelectedServices([]);
+                      setSelectedSubcategories([]);
+                      setBookingData({ name: "", phone: "", email: "", address: "", budget: "", services: [] });
+                    }, 100);
                   }}
                   className="btn-primary"
                 >
@@ -1602,45 +2110,23 @@ function Services() {
 // Testimonials Section
 function Testimonials() {
   const [ref, isVisible] = useScrollAnimation();
-  
-  const testimonials = [
-    {
-      name: "Priya Sharma",
-      role: "Homeowner, Delhi",
-      content: "LV Interiors transformed our 3BHK completely. The painting work was flawless and the team was professional throughout. Highly recommend their services!",
-      rating: 5,
-    },
-    {
-      name: "Rajesh Kumar",
-      role: "Business Owner",
-      content: "We hired them for our office renovation. The false ceiling and painting work exceeded our expectations. Great attention to detail and timely completion.",
-      rating: 5,
-    },
-    {
-      name: "Anita Mehta",
-      role: "Interior Designer",
-      content: "As an interior designer, I've worked with many contractors. LV Interiors stands out for their quality wood polish work and PU finishing. A reliable partner.",
-      rating: 5,
-    },
-    {
-      name: "Vikram Singh",
-      role: "Homeowner, Gurgaon",
-      content: "The texture painting they did in our living room is absolutely stunning. Everyone who visits compliments it. Professional team and fair pricing.",
-      rating: 5,
-    },
-    {
-      name: "Sunita Agarwal",
-      role: "Restaurant Owner",
-      content: "Complete renovation of our restaurant was handled smoothly. From demolition to final touches, everything was coordinated perfectly. Will hire again!",
-      rating: 5,
-    },
-    {
-      name: "Amit Patel",
-      role: "Homeowner, Noida",
-      content: "Got my old furniture refurbished and it looks brand new! The wood polishing quality is exceptional. Very satisfied with the results and pricing.",
-      rating: 5,
-    },
-  ];
+  const [testimonials, setTestimonials] = useState<any[]>([]);
+
+  useEffect(() => {
+    const fetchTestimonials = async () => {
+      try {
+        const res = await fetch('/api/feedback');
+        if (res.ok) {
+          const data = await res.json();
+          // Only show visible feedbacks
+          setTestimonials(data.filter((f: any) => f.visibility));
+        }
+      } catch (e) {
+        console.error("Failed to fetch testimonials", e);
+      }
+    };
+    fetchTestimonials();
+  }, []);
 
   return (
     <section id="testimonials" className="section-padding bg-white">
@@ -1655,7 +2141,7 @@ function Testimonials() {
             Don&apos;t just take our word for it. Here&apos;s what our happy clients have to say about their experience with LV Interiors.
           </p>
         </div>
-        
+
         {/* Testimonials Grid */}
         <div ref={ref} className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {testimonials.map((testimonial, index) => (
@@ -1668,12 +2154,12 @@ function Testimonials() {
                   </span>
                 ))}
               </div>
-              
+
               {/* Content */}
               <p className="text-coffee/80 mb-6 relative z-10 leading-relaxed">
                 {testimonial.content}
               </p>
-              
+
               {/* Author */}
               <div className="flex items-center gap-4 relative z-10">
                 <div className="w-12 h-12 rounded-full gradient-warm flex items-center justify-center text-white font-bold interactive-icon hover-lift">
@@ -1681,35 +2167,37 @@ function Testimonials() {
                 </div>
                 <div>
                   <p className="font-semibold text-charcoal">{testimonial.name}</p>
-                  <p className="text-sm text-coffee/60">{testimonial.role}</p>
+                  {testimonial.title && <p className="text-xs text-coffee/60 font-medium">{testimonial.title}</p>}
+                  {testimonial.service && <p className="text-xs text-caramel">{testimonial.service}</p>}
+                  {!testimonial.title && !testimonial.service && <p className="text-sm text-coffee/60">{testimonial.role || "Client"}</p>}
                 </div>
               </div>
             </div>
           ))}
         </div>
-        
+
         {/* Overall Rating */}
         <div className="mt-16 text-center">
-            <div className="inline-flex items-center gap-6 bg-cream rounded-2xl px-8 py-6 shadow-md hover-lift">
-              <div>
-                <p className="stat-number animate-glow">4.9</p>
-                <div className="flex gap-1 text-gold mt-2 justify-center">
-                  {[...Array(5)].map((_, i) => (
-                    <span key={i} className="interactive-icon animate-bounce" style={{ animationDelay: `${i * 0.1}s` }}>
-                      <StarIcon />
-                    </span>
-                  ))}
-                </div>
-              </div>
-              <div className="text-left border-l border-sand pl-6">
-                <p className="text-2xl font-bold text-charcoal count-up">500+</p>
-                <p className="text-coffee/60">Happy Clients</p>
-              </div>
-              <div className="text-left border-l border-sand pl-6">
-                <p className="text-2xl font-bold text-charcoal count-up">100%</p>
-                <p className="text-coffee/60">Satisfaction Rate</p>
+          <div className="inline-flex items-center gap-6 bg-cream rounded-2xl px-8 py-6 shadow-md hover-lift">
+            <div>
+              <p className="stat-number animate-glow">4.9</p>
+              <div className="flex gap-1 text-gold mt-2 justify-center">
+                {[...Array(5)].map((_, i) => (
+                  <span key={i} className="interactive-icon animate-bounce" style={{ animationDelay: `${i * 0.1}s` }}>
+                    <StarIcon />
+                  </span>
+                ))}
               </div>
             </div>
+            <div className="text-left border-l border-sand pl-6">
+              <p className="text-2xl font-bold text-charcoal count-up">500+</p>
+              <p className="text-coffee/60">Happy Clients</p>
+            </div>
+            <div className="text-left border-l border-sand pl-6">
+              <p className="text-2xl font-bold text-charcoal count-up">100%</p>
+              <p className="text-coffee/60">Satisfaction Rate</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -1721,6 +2209,7 @@ function Contact() {
   const [formType, setFormType] = useState<"query" | "feedback">("query");
   const [formData, setFormData] = useState({
     name: "",
+    title: "", // New optional field
     phone: "",
     email: "",
     service: "",
@@ -1729,12 +2218,57 @@ function Contact() {
   });
   const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // In a real app, you would send this to your backend
-    console.log("Form submitted:", { formType, ...formData });
-    setSubmitted(true);
-    setTimeout(() => setSubmitted(false), 3000);
+
+    try {
+      if (formType === 'query') {
+        // Validation: Email OR Phone
+        if (!formData.email && !formData.phone) {
+          alert("Please provide either an Email or Phone number so we can contact you.");
+          return;
+        }
+
+        const res = await fetch('/api/queries', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            name: formData.name,
+            email: formData.email,
+            phone: formData.phone,
+            message: `${formData.service ? `Service: ${formData.service}. ` : ''}${formData.message}`,
+            status: 'requested'
+          }),
+        });
+
+        if (!res.ok) throw new Error('Failed to submit query');
+      } else {
+        // Feedback
+        const res = await fetch('/api/feedback', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            name: formData.name,
+            title: formData.title,
+            email: formData.email,
+            service: formData.service,
+            message: formData.message,
+            rating: formData.rating,
+            visibility: false,
+          }),
+        });
+
+        if (!res.ok) throw new Error('Failed to submit feedback');
+      }
+
+      console.log("Form submitted:", { formType, ...formData });
+      setSubmitted(true);
+      setTimeout(() => setSubmitted(false), 3000);
+      setFormData({ name: "", title: "", phone: "", email: "", service: "", message: "", rating: 5 });
+    } catch (error) {
+      console.error(error);
+      alert('Failed to submit. Please try again.');
+    }
   };
 
   return (
@@ -1742,7 +2276,7 @@ function Contact() {
       {/* Background */}
       <div className="absolute inset-0 pattern-overlay opacity-20"></div>
       <div className="absolute top-0 left-0 w-1/2 h-full bg-gradient-to-r from-white to-transparent"></div>
-      
+
       <div className="max-w-7xl mx-auto px-6 lg:px-8 relative">
         <div className="grid lg:grid-cols-2 gap-16">
           {/* Contact Info */}
@@ -1754,7 +2288,7 @@ function Contact() {
             <p className="text-lg text-coffee/80 mb-8 leading-relaxed">
               Ready to transform your space? Get in touch with us for a free consultation and site visit. We&apos;re here to bring your vision to life.
             </p>
-            
+
             {/* Contact Details */}
             <div className="space-y-6 mb-10">
               <a href="tel:+919999999999" className="flex items-center gap-4 group hover-lift">
@@ -1766,7 +2300,7 @@ function Contact() {
                   <p className="text-lg font-semibold text-charcoal">+91 99999 99999</p>
                 </div>
               </a>
-              
+
               <a href="https://wa.me/919999999999" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 group hover-lift">
                 <div className="w-14 h-14 rounded-xl bg-green-100 flex items-center justify-center text-green-600 group-hover:bg-green-500 group-hover:text-white transition-all interactive-icon">
                   <WhatsAppIcon />
@@ -1776,7 +2310,7 @@ function Contact() {
                   <p className="text-lg font-semibold text-charcoal">+91 99999 99999</p>
                 </div>
               </a>
-              
+
               <a href="mailto:info@LVinteriors.com" className="flex items-center gap-4 group hover-lift">
                 <div className="w-14 h-14 rounded-xl bg-caramel/10 flex items-center justify-center text-caramel group-hover:bg-caramel group-hover:text-white transition-all interactive-icon">
                   <MailIcon />
@@ -1786,7 +2320,7 @@ function Contact() {
                   <p className="text-lg font-semibold text-charcoal">info@LVinteriors.com</p>
                 </div>
               </a>
-              
+
               <div className="flex items-center gap-4 hover-lift">
                 <div className="w-14 h-14 rounded-xl bg-caramel/10 flex items-center justify-center text-caramel interactive-icon">
                   <LocationIcon />
@@ -1797,7 +2331,7 @@ function Contact() {
                 </div>
               </div>
             </div>
-            
+
             {/* Working Hours */}
             <div className="bg-white rounded-2xl p-6 shadow-md">
               <h4 className="font-semibold text-charcoal mb-4">Working Hours</h4>
@@ -1813,7 +2347,7 @@ function Contact() {
               </div>
             </div>
           </div>
-          
+
           {/* Contact Form */}
           <div className="bg-white rounded-3xl p-8 md:p-10 shadow-xl">
             {/* Form Type Toggle */}
@@ -1821,27 +2355,25 @@ function Contact() {
               <button
                 type="button"
                 onClick={() => setFormType("query")}
-                className={`flex-1 py-3 px-4 rounded-lg font-medium transition-all ${
-                  formType === "query"
-                    ? "bg-white text-charcoal shadow-md"
-                    : "text-coffee/60 hover:text-coffee"
-                }`}
+                className={`flex-1 py-3 px-4 rounded-lg font-medium transition-all ${formType === "query"
+                  ? "bg-white text-charcoal shadow-md"
+                  : "text-coffee/60 hover:text-coffee"
+                  }`}
               >
                 Get a Free Query
               </button>
               <button
                 type="button"
                 onClick={() => setFormType("feedback")}
-                className={`flex-1 py-3 px-4 rounded-lg font-medium transition-all ${
-                  formType === "feedback"
-                    ? "bg-white text-charcoal shadow-md"
-                    : "text-coffee/60 hover:text-coffee"
-                }`}
+                className={`flex-1 py-3 px-4 rounded-lg font-medium transition-all ${formType === "feedback"
+                  ? "bg-white text-charcoal shadow-md"
+                  : "text-coffee/60 hover:text-coffee"
+                  }`}
               >
                 Register Feedback
               </button>
             </div>
-            
+
             {submitted ? (
               <div className="text-center py-12">
                 <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-green-100 flex items-center justify-center text-green-600">
@@ -1849,7 +2381,7 @@ function Contact() {
                 </div>
                 <h3 className="text-xl font-semibold text-charcoal mb-2">Thank You!</h3>
                 <p className="text-coffee/60">
-                  {formType === "query" 
+                  {formType === "query"
                     ? "We've received your query and will get back to you within 24 hours."
                     : "Thank you for your valuable feedback!"}
                 </p>
@@ -1860,11 +2392,11 @@ function Contact() {
                   {formType === "query" ? "Get a Free Consultation" : "Share Your Feedback"}
                 </h3>
                 <p className="text-coffee/60 mb-8">
-                  {formType === "query" 
+                  {formType === "query"
                     ? "Fill the form and we'll get back to you within 24 hours."
                     : "Help us improve by sharing your experience with our services."}
                 </p>
-                
+
                 <form onSubmit={handleSubmit} className="space-y-5">
                   <div>
                     <input
@@ -1875,23 +2407,33 @@ function Contact() {
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                     />
                   </div>
-                  
+
+                  {formType === "feedback" && (
+                    <div>
+                      <input
+                        type="text"
+                        placeholder="Your Title (Optional, e.g. Homeowner, Architect)"
+                        value={formData.title}
+                        onChange={(e) => setFormData({ ...formData, title: e.target.value })}
+                      />
+                    </div>
+                  )}
+
                   <div className="grid md:grid-cols-2 gap-5">
                     <input
                       type="tel"
-                      placeholder="Phone Number *"
-                      required
+                      placeholder="Phone Number (Optional)"
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                     />
                     <input
                       type="email"
-                      placeholder="Email Address"
+                      placeholder="Email Address (Optional)"
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                     />
                   </div>
-                  
+
                   <div>
                     <select
                       className="w-full px-5 py-4 border-2 border-sand rounded-xl bg-white text-coffee focus:outline-none focus:border-caramel transition-all"
@@ -1908,7 +2450,7 @@ function Contact() {
                       <option value="Multiple Services">Multiple Services</option>
                     </select>
                   </div>
-                  
+
                   {formType === "feedback" && (
                     <div>
                       <label className="block text-sm font-medium text-coffee mb-3">Your Rating</label>
@@ -1918,11 +2460,10 @@ function Contact() {
                             key={star}
                             type="button"
                             onClick={() => setFormData({ ...formData, rating: star })}
-                            className={`w-10 h-10 rounded-lg flex items-center justify-center transition-all ${
-                              star <= formData.rating
-                                ? "text-gold bg-gold/10"
-                                : "text-sand bg-cream hover:text-gold"
-                            }`}
+                            className={`w-10 h-10 rounded-lg flex items-center justify-center transition-all ${star <= formData.rating
+                              ? "text-gold bg-gold/10"
+                              : "text-sand bg-cream hover:text-gold"
+                              }`}
                           >
                             <StarIcon />
                           </button>
@@ -1930,18 +2471,18 @@ function Contact() {
                       </div>
                     </div>
                   )}
-                  
+
                   <div>
                     <textarea
-                      placeholder={formType === "query" 
-                        ? "Tell us about your project..." 
+                      placeholder={formType === "query"
+                        ? "Tell us about your project..."
                         : "Share your experience with us..."}
                       rows={4}
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                     ></textarea>
                   </div>
-                  
+
                   <button type="submit" className="btn-primary w-full text-center justify-center">
                     {formType === "query" ? "Submit Query" : "Submit Feedback"}
                   </button>
@@ -1972,33 +2513,33 @@ function Footer() {
               </span>
             </div>
             <p className="text-cream/60 mb-6 max-w-md leading-relaxed">
-              Premium painting, wood finishing, and renovation services that bring your vision to life. 
+              Premium painting, wood finishing, and renovation services that bring your vision to life.
               Serving Delhi NCR with excellence since 2016.
             </p>
             <div className="flex gap-4">
-              <a 
-                href="https://wa.me/919999999999" 
-            target="_blank"
-            rel="noopener noreferrer"
+              <a
+                href="https://wa.me/919999999999"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 rounded-lg bg-cream/10 flex items-center justify-center text-cream hover:bg-green-500 transition-colors"
-          >
+              >
                 <WhatsAppIcon />
               </a>
-              <a 
+              <a
                 href="tel:+919999999999"
                 className="w-10 h-10 rounded-lg bg-cream/10 flex items-center justify-center text-cream hover:bg-caramel transition-colors"
               >
                 <PhoneIcon />
-          </a>
-          <a
+              </a>
+              <a
                 href="mailto:info@LVinteriors.com"
                 className="w-10 h-10 rounded-lg bg-cream/10 flex items-center justify-center text-cream hover:bg-caramel transition-colors"
               >
                 <MailIcon />
-          </a>
-        </div>
-    </div>
-          
+              </a>
+            </div>
+          </div>
+
           {/* Quick Links */}
           <div>
             <h4 className="font-semibold text-cream mb-6">Quick Links</h4>
@@ -2012,7 +2553,7 @@ function Footer() {
               ))}
             </ul>
           </div>
-          
+
           {/* Services */}
           <div>
             <h4 className="font-semibold text-cream mb-6">Our Services</h4>
@@ -2033,7 +2574,7 @@ function Footer() {
             </ul>
           </div>
         </div>
-        
+
         {/* Bottom Bar */}
         <div className="border-t border-cream/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-cream/50 text-sm">

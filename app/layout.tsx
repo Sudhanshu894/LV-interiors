@@ -19,13 +19,13 @@ export const metadata: Metadata = {
   description: "Transform your space with LV Interiors. Expert painting, wood finishing, and renovation services. Quality craftsmanship for homes and businesses.",
   keywords: "interior design, painting services, wood polish, PU coating, renovation, home improvement",
   icons: {
-    icon: "/Logo1.png",
+    icon: "/LVLogo.png",
   },
   openGraph: {
     title: "LV Interiors | Premium Interior & Painting Services",
     description: "Transform your space with LV Interiors. Expert painting, wood finishing, and renovation services. Quality craftsmanship for homes and businesses.",
     images: [
-      { url: "/Logo1.png" },
+      { url: "/LVLogo.png" },
     ],
   },
   twitter: {
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     title: "LV Interiors | Premium Interior & Painting Services",
     description: "Transform your space with LV Interiors. Expert painting, wood finishing, and renovation services. Quality craftsmanship for homes and businesses.",
     images: [
-      { url: "/Logo1.png" },
+      { url: "/LVLogo.png" },
     ],
   },
 };
