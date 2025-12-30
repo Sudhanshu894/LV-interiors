@@ -177,6 +177,16 @@ const FlooringIcon = () => (
   </svg>
 );
 
+const DesignIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+    <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+    <line x1="9" y1="3" x2="9" y2="21"></line>
+    <line x1="3" y1="9" x2="21" y2="9"></line>
+    <path d="M9 9h6v6H9z"></path>
+    <circle cx="12" cy="12" r="2"></circle>
+  </svg>
+);
+
 // Hook for scroll-triggered animations
 function useScrollAnimation() {
   const [isVisible, setIsVisible] = useState(false);
@@ -1043,6 +1053,88 @@ function Services() {
         },
       ],
     },
+    {
+      id: 5,
+      icon: <DesignIcon />,
+      title: "Interior Planning & Design",
+      description: "Professional interior planning, furniture design, and 2D/3D visualization services to bring your vision to life.",
+      bgGradient: "from-purple-100 to-pink-50",
+      imagePath: "https://i.pinimg.com/1200x/2e/ec/16/2eec16de44834f8e460cccbba831ec2f.jpg",
+      subcategories: [
+        {
+          id: "interior-planning",
+          title: "Interior Planning",
+          description: "Comprehensive interior space planning and layout design services for optimal functionality and aesthetics.",
+          images: [
+            "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&h=600&fit=crop",
+            "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=800&h=600&fit=crop",
+          ],
+          gallery: [
+            "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&h=600&fit=crop",
+            "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=800&h=600&fit=crop",
+          ],
+          feedbacks: [
+            { name: "Rahul Mehta", rating: 5, comment: "Excellent space planning! Maximized our space beautifully." },
+          ],
+        },
+        {
+          id: "furniture-design",
+          title: "Furniture Design",
+          description: "Custom furniture design solutions tailored to your space, style, and functional requirements.",
+          images: [
+            "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=800&h=600&fit=crop",
+          ],
+          gallery: [
+            "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=800&h=600&fit=crop",
+          ],
+          feedbacks: [
+            { name: "Priya Sharma", rating: 5, comment: "Beautiful custom furniture designs! Perfect fit for our home." },
+          ],
+        },
+        {
+          id: "2d-plans",
+          title: "2D Plans",
+          description: "Detailed 2D floor plans, layouts, and technical drawings for your interior projects.",
+          images: [
+            "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=800&h=600&fit=crop",
+          ],
+          gallery: [
+            "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=800&h=600&fit=crop",
+          ],
+          feedbacks: [
+            { name: "Amit Singh", rating: 5, comment: "Very detailed and professional 2D plans. Made execution easy!" },
+          ],
+        },
+        {
+          id: "3d-visualization",
+          title: "3D Visualization",
+          description: "Realistic 3D renders and visualizations to preview your space before execution.",
+          images: [
+            "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&h=600&fit=crop",
+          ],
+          gallery: [
+            "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&h=600&fit=crop",
+          ],
+          feedbacks: [
+            { name: "Vikram Singh", rating: 5, comment: "Amazing 3D visualization! Could see exactly how it would look." },
+          ],
+        },
+        {
+          id: "space-planning",
+          title: "Space Planning",
+          description: "Expert space planning and optimization services to maximize functionality and flow.",
+          images: [
+            "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=800&h=600&fit=crop",
+          ],
+          gallery: [
+            "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=800&h=600&fit=crop",
+          ],
+          feedbacks: [
+            { name: "Anita Mehta", rating: 5, comment: "Perfect space planning! Every inch utilized beautifully." },
+          ],
+        },
+      ],
+    },
   ];
 
   const toggleService = (serviceId: number) => {
@@ -1131,7 +1223,7 @@ function Services() {
 
   const handleBooking = async (e?: React.FormEvent | React.MouseEvent) => {
     if (e && 'preventDefault' in e) {
-      e.preventDefault();
+    e.preventDefault();
     }
     if (bookingStep === 'form') {
       setBookingStep('contract');
@@ -2055,14 +2147,14 @@ function Services() {
                   <p className="text-coffee/70 text-sm">#{bookingReference}</p>
                   <p className="font-semibold text-charcoal mb-2 mt-4">Services:</p>
                   {bookingData.services && bookingData.services.length > 0 ? (
-                    <ul className="space-y-2">
-                      {bookingData.services.map((service, idx) => (
-                        <li key={idx} className="flex items-center gap-2 text-coffee/90 text-sm">
-                          <span className="w-2 h-2 rounded-full bg-caramel flex-shrink-0"></span>
-                          {service}
-                        </li>
-                      ))}
-                    </ul>
+                  <ul className="space-y-2">
+                    {bookingData.services.map((service, idx) => (
+                      <li key={idx} className="flex items-center gap-2 text-coffee/90 text-sm">
+                        <span className="w-2 h-2 rounded-full bg-caramel flex-shrink-0"></span>
+                        {service}
+                      </li>
+                    ))}
+                  </ul>
                   ) : (
                     <p className="text-coffee/70 text-sm">No services selected</p>
                   )}
@@ -2266,6 +2358,17 @@ const getAllServiceTags = () => {
         { id: "flat", title: "Flat" },
         { id: "terrace", title: "Terrace" },
         { id: "corporate-areas", title: "Corporate Areas" },
+      ],
+    },
+    {
+      id: 5,
+      title: "Interior Planning & Design",
+      subcategories: [
+        { id: "interior-planning", title: "Interior Planning" },
+        { id: "furniture-design", title: "Furniture Design" },
+        { id: "2d-plans", title: "2D Plans" },
+        // { id: "3d-visualization", title: "3D Visualization" },
+        { id: "space-planning", title: "Space Planning" },
       ],
     },
   ];
