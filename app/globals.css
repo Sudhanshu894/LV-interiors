@@ -734,6 +734,18 @@ input::placeholder, textarea::placeholder {
   animation: spin 0.8s linear infinite;
 }
 
+/* Hide scrollbar but keep scrolling */
+.hide-scrollbar {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+  background: transparent;
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .section-padding {

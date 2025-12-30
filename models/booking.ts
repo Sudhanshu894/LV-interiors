@@ -27,17 +27,12 @@ const BookingSchema: Schema = new Schema(
     { timestamps: true }
 );
 
-// Custom validation to ensure either email or phone is provided
-BookingSchema.pre('validate', function (next: mongoose.CallbackError | any) {
-    if (!this.email && !this.phone) {
-        next(new Error('Either email or phone is required'));
-    } else {
-        next();
-    }
-});
-
 // Prevent model overwrite upon hot reload
-const Booking: Model<IBooking> =
-    mongoose.models.Booking || mongoose.model<IBooking>('Booking', BookingSchema);
+// Delete the model if it exists to force recompilation (helps with hot reload issues)
+if (mongoose.models.Booking) {
+    delete mongoose.models.Booking;
+}
+
+const Booking: Model<IBooking> = mongoose.model<IBooking>('Booking', BookingSchema);
 
 export default Booking;

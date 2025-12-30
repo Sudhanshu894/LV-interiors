@@ -322,7 +322,17 @@ function FeedbackHelper() {
                                     <h3 className="text-lg font-semibold text-white">{f.name}</h3>
                                     {f.title && <span className="text-xs text-zinc-500">({f.title})</span>}
                                 </div>
-                                {f.service && <p className="text-xs text-amber-700 font-medium uppercase tracking-wider mt-0.5">{f.service}</p>}
+                                {(f.services && f.services.length > 0) ? (
+                                    <div className="flex flex-wrap gap-1 mt-1 text-nowrap border border-red-500">
+                                        {f.services.map((s: string, idx: number) => (
+                                            <span key={idx} className="text-xs text-amber-700 font-medium uppercase tracking-wider text-nowrap bg-amber-900/20 px-2 py-0.5 rounded">
+                                                {s}
+                                            </span>
+                                        ))}
+                                    </div>
+                                ) : f.service && (
+                                    <p className="text-xs text-amber-700 font-medium uppercase tracking-wider mt-0.5">{f.service}</p>
+                                )}
                                 {f.email && <p className="text-xs text-zinc-500 mt-1">{f.email}</p>}
                             </div>
                             {f.rating && <div className="px-2 py-1 bg-amber-900/30 text-amber-500 rounded text-xs">★ {f.rating}</div>}

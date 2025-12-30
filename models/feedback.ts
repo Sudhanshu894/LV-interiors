@@ -3,7 +3,8 @@ import mongoose, { Schema, Document, Model } from 'mongoose';
 export interface IFeedback extends Document {
     name: string;
     title?: string;
-    service?: string;
+    service?: string; // Keep for backward compatibility
+    services?: string[]; // New array field for multiple services
     email?: string; // Optional for testimonials
     message: string;
     rating?: number; // 1-5
@@ -16,7 +17,8 @@ const FeedbackSchema: Schema = new Schema(
     {
         name: { type: String, required: true },
         title: { type: String },
-        service: { type: String },
+        service: { type: String }, // Keep for backward compatibility
+        services: { type: [String], default: [] }, // New array field
         email: { type: String },
         message: { type: String, required: true },
         rating: { type: Number, min: 1, max: 5 },

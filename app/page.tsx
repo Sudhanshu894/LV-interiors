@@ -327,7 +327,7 @@ function Hero() {
             {/* Stats */}
             <div className="grid grid-cols-3 gap-8 pt-8 border-t border-sand animate-fade-in-up delay-400">
               <div>
-                <div className="stat-number">8+</div>
+                <div className="stat-number">30+</div>
                 <p className="text-sm text-coffee/70 mt-1">Years Experience</p>
               </div>
               <div>
@@ -335,7 +335,7 @@ function Hero() {
                 <p className="text-sm text-coffee/70 mt-1">Projects Done</p>
               </div>
               <div>
-                <div className="stat-number">100%</div>
+                <div className="stat-number">98%</div>
                 <p className="text-sm text-coffee/70 mt-1">Client Satisfaction</p>
               </div>
             </div>
@@ -364,8 +364,8 @@ function Hero() {
                     <CheckIcon />
                   </div>
                   <div>
-                    <p className="font-semibold text-charcoal">Quality Assured</p>
-                    <p className="text-sm text-coffee/60">ISO Certified Work</p>
+                    <p className="font-semibold text-charcoal">Trusted & Reliable</p>
+                    <p className="text-sm text-coffee/60">Premium Quality Guaranteed</p>
                   </div>
                 </div>
               </div>
@@ -373,14 +373,8 @@ function Hero() {
               {/* Another Floating Badge */}
               <div className="absolute -top-4 -right-4 floating-badge animate-float delay-200 hover-lift cursor-pointer">
                 <div className="text-center">
-                  <p className="stat-number text-2xl">4.9</p>
-                  <div className="flex text-gold mt-1">
-                    <StarIcon />
-                    <StarIcon />
-                    <StarIcon />
-                    <StarIcon />
-                    <StarIcon />
-                  </div>
+                  <p className="text-md font-bold text-coffee/70">Since</p>
+                  <p className="stat-number text-2xl">1995</p>
                 </div>
               </div>
             </div>
@@ -445,7 +439,7 @@ function About() {
 
             {/* Experience Badge */}
             <div className="absolute -bottom-6 left-1/2 -translate-x-1/2 bg-white rounded-2xl shadow-xl p-6 text-center">
-              <p className="stat-number">8+</p>
+              <p className="stat-number">30+</p>
               <p className="text-sm text-coffee/70 font-medium">Years of Excellence</p>
             </div>
           </div>
@@ -466,7 +460,7 @@ function About() {
             {/* Key Points */}
             <div className="space-y-4 mb-8">
               {[
-                "Expert craftsmen with 8+ years experience",
+                "Expert craftsmen with 20+ years experience",
                 "Premium quality materials & finishes",
                 "On-time project delivery guarantee",
                 "Comprehensive after-service support",
@@ -1076,6 +1070,26 @@ function Services() {
     return selectedSubcategories.some(s => s.serviceId === serviceId && s.subcategoryId === subcategoryId);
   };
 
+  // Helper function to find subcategory (including nested subcategories)
+  const findSubcategory = (serviceId: number, subcategoryId: string) => {
+    const service = services.find(s => s.id === serviceId);
+    if (!service) return null;
+
+    // First check direct subcategories
+    const directSub = service.subcategories?.find(sub => sub.id === subcategoryId);
+    if (directSub) return directSub;
+
+    // Then check nested subcategories
+    for (const sub of service.subcategories || []) {
+      if ('nestedSubcategories' in sub && sub.nestedSubcategories && Array.isArray(sub.nestedSubcategories)) {
+        const nested = (sub.nestedSubcategories as any[]).find(n => n.id === subcategoryId);
+        if (nested) return nested;
+      }
+    }
+
+    return null;
+  };
+
   const handleRegistration = async (e: React.FormEvent) => {
     e.preventDefault();
     const selectedServicesList = services
@@ -1115,8 +1129,10 @@ function Services() {
     }
   };
 
-  const handleBooking = async (e: React.FormEvent) => {
-    e.preventDefault();
+  const handleBooking = async (e?: React.FormEvent | React.MouseEvent) => {
+    if (e && 'preventDefault' in e) {
+      e.preventDefault();
+    }
     if (bookingStep === 'form') {
       setBookingStep('contract');
     } else if (bookingStep === 'contract' && contractAccepted) {
@@ -1125,23 +1141,19 @@ function Services() {
         ...services.filter(s => selectedServices.includes(s.id)).map(s => s.title),
         ...selectedSubcategories.map(sc => {
           const service = services.find(s => s.id === sc.serviceId);
-          let subcat = service?.subcategories?.find(sub => sub.id === sc.subcategoryId);
+          const subcat = findSubcategory(sc.serviceId, sc.subcategoryId);
 
-          // If not found in direct subcategories, search in nested subcategories
-          if (!subcat) {
-            for (const sub of service?.subcategories || []) {
-              if ('nestedSubcategories' in sub && sub.nestedSubcategories && Array.isArray(sub.nestedSubcategories)) {
-                const nested = (sub.nestedSubcategories as any[]).find(n => n.id === sc.subcategoryId);
-                if (nested) {
-                  subcat = nested;
-                  break;
-                }
-              }
-            }
+          // Only return if both service and subcat are found
+          if (service && subcat) {
+            return `${service.title} - ${subcat.title}`;
           }
-
-          return `${service?.title} - ${subcat?.title}`;
-        })
+          // If service found but subcat not found, return just service title
+          if (service) {
+            return service.title;
+          }
+          // If nothing found, return empty string (will be filtered out)
+          return '';
+        }).filter(item => item !== '') // Filter out empty strings
       ];
 
       const fullBookingData = { ...bookingData, services: selectedItems };
@@ -1418,8 +1430,8 @@ function Services() {
                   <div className="grid md:grid-cols-2 gap-4">
                     {selectedSubcategories.map((sc) => {
                       const service = services.find(s => s.id === sc.serviceId);
-                      const subcat = service?.subcategories?.find(sub => sub.id === sc.subcategoryId);
-                      if (!subcat) return null;
+                      const subcat = findSubcategory(sc.serviceId, sc.subcategoryId);
+                      if (!service || !subcat) return null;
                       return (
                         <div
                           key={`${sc.serviceId}-${sc.subcategoryId}`}
@@ -1429,12 +1441,12 @@ function Services() {
                             <div className="w-16 h-16 rounded-lg overflow-hidden flex-shrink-0">
                               <div
                                 className="w-full h-full bg-cover bg-center"
-                                style={{ backgroundImage: `url(${subcat.images[0]})` }}
+                                style={{ backgroundImage: `url(${subcat.images?.[0] || ''})` }}
                               />
                             </div>
                             <div>
                               <p className="font-medium text-charcoal text-sm">{subcat.title}</p>
-                              <p className="text-xs text-coffee/60">{service?.title}</p>
+                              <p className="text-xs text-coffee/60">{service.title}</p>
                             </div>
                           </div>
                           <button
@@ -1471,23 +1483,15 @@ function Services() {
                       ...services.filter(s => selectedServices.includes(s.id)).map(s => s.title),
                       ...selectedSubcategories.map(sc => {
                         const service = services.find(s => s.id === sc.serviceId);
-                        let subcat = service?.subcategories?.find(sub => sub.id === sc.subcategoryId);
-
-                        // If not found in direct subcategories, search in nested subcategories
-                        if (!subcat) {
-                          for (const sub of service?.subcategories || []) {
-                            if ('nestedSubcategories' in sub && sub.nestedSubcategories && Array.isArray(sub.nestedSubcategories)) {
-                              const nested = (sub.nestedSubcategories as any[]).find(n => n.id === sc.subcategoryId);
-                              if (nested) {
-                                subcat = nested;
-                                break;
-                              }
-                            }
-                          }
+                        const subcat = findSubcategory(sc.serviceId, sc.subcategoryId);
+                        if (service && subcat) {
+                          return `${service.title} - ${subcat.title}`;
                         }
-
-                        return `${service?.title} - ${subcat?.title}`;
-                      })
+                        if (service) {
+                          return service.title;
+                        }
+                        return '';
+                      }).filter(item => item !== '')
                     ]
                   });
                   setShowBooking(true);
@@ -1519,22 +1523,11 @@ function Services() {
                           ...services.filter(s => selectedServices.includes(s.id)).map(s => s.title),
                           ...selectedSubcategories.map(sc => {
                             const service = services.find(s => s.id === sc.serviceId);
-                            let subcat = service?.subcategories?.find(sub => sub.id === sc.subcategoryId);
-                            if (!subcat) {
-                              for (const sub of service?.subcategories || []) {
-                                if ('nestedSubcategories' in sub && sub.nestedSubcategories) {
-                                  const nested = (sub.nestedSubcategories as any[]).find(n => n.id === sc.subcategoryId);
-                                  if (nested) {
-                                    subcat = nested;
-                                    break;
-                                  }
-                                }
-                              }
-                            }
-                            if (service && subcat) return `${service.title} – ${subcat.title}`;
+                            const subcat = findSubcategory(sc.serviceId, sc.subcategoryId);
+                            if (service && subcat) return `${service.title} - ${subcat.title}`;
                             if (service) return service.title;
                             return '';
-                          })
+                          }).filter(item => item !== '')
                         ]
                       });
                       setShowBooking(true);
@@ -1553,22 +1546,11 @@ function Services() {
                           ...services.filter(s => selectedServices.includes(s.id)).map(s => s.title),
                           ...selectedSubcategories.map(sc => {
                             const service = services.find(s => s.id === sc.serviceId);
-                            let subcat = service?.subcategories?.find(sub => sub.id === sc.subcategoryId);
-                            if (!subcat) {
-                              for (const sub of service?.subcategories || []) {
-                                if ('nestedSubcategories' in sub && sub.nestedSubcategories) {
-                                  const nested = (sub.nestedSubcategories as any[]).find(n => n.id === sc.subcategoryId);
-                                  if (nested) {
-                                    subcat = nested;
-                                    break;
-                                  }
-                                }
-                              }
-                            }
-                            if (service && subcat) return `${service.title} – ${subcat.title}`;
+                            const subcat = findSubcategory(sc.serviceId, sc.subcategoryId);
+                            if (service && subcat) return `${service.title} - ${subcat.title}`;
                             if (service) return service.title;
                             return '';
-                          })
+                          }).filter(item => item !== '')
                         ]
                       });
                       setShowBooking(true);
@@ -2072,14 +2054,18 @@ function Services() {
                   <p className="font-semibold text-charcoal mb-2">Booking Reference:</p>
                   <p className="text-coffee/70 text-sm">#{bookingReference}</p>
                   <p className="font-semibold text-charcoal mb-2 mt-4">Services:</p>
-                  <ul className="space-y-2">
-                    {bookingData.services.map((service, idx) => (
-                      <li key={idx} className="flex items-center gap-2 text-coffee/90 text-sm">
-                        <span className="w-2 h-2 rounded-full bg-caramel flex-shrink-0"></span>
-                        {service}
-                      </li>
-                    ))}
-                  </ul>
+                  {bookingData.services && bookingData.services.length > 0 ? (
+                    <ul className="space-y-2">
+                      {bookingData.services.map((service, idx) => (
+                        <li key={idx} className="flex items-center gap-2 text-coffee/90 text-sm">
+                          <span className="w-2 h-2 rounded-full bg-caramel flex-shrink-0"></span>
+                          {service}
+                        </li>
+                      ))}
+                    </ul>
+                  ) : (
+                    <p className="text-coffee/70 text-sm">No services selected</p>
+                  )}
                 </div>
                 <button
                   onClick={() => {
@@ -2155,23 +2141,35 @@ function Testimonials() {
                 ))}
               </div>
 
-              {/* Content */}
-              <p className="text-coffee/80 mb-6 relative z-10 leading-relaxed">
-                {testimonial.content}
-              </p>
-
-              {/* Author */}
-              <div className="flex items-center gap-4 relative z-10">
-                <div className="w-12 h-12 rounded-full gradient-warm flex items-center justify-center text-white font-bold interactive-icon hover-lift">
+              {/* Author - Moved to top */}
+              <div className="flex items-center gap-4 mb-4 relative z-10">
+                <div className="w-12 h-12 rounded-full gradient-warm flex items-center justify-center text-white font-bold interactive-icon hover-lift flex-shrink-0">
                   {testimonial.name.charAt(0)}
                 </div>
-                <div>
+                <div className="flex-1">
                   <p className="font-semibold text-charcoal">{testimonial.name}</p>
-                  {testimonial.title && <p className="text-xs text-coffee/60 font-medium">{testimonial.title}</p>}
-                  {testimonial.service && <p className="text-xs text-caramel">{testimonial.service}</p>}
-                  {!testimonial.title && !testimonial.service && <p className="text-sm text-coffee/60">{testimonial.role || "Client"}</p>}
+                  {testimonial.title && <p className="text-xs text-coffee/60 font-medium mt-0.5">{testimonial.title}</p>}
+                  {(testimonial.services && testimonial.services.length > 0) ? (
+                    <div className="flex flex-wrap gap-1 mt-1">
+                      {testimonial.services.map((s: string, idx: number) => (
+                        <span key={idx} className="text-xs text-caramel bg-caramel/10 px-2 py-0.5 rounded whitespace-nowrap">
+                          {s}
+                        </span>
+                      ))}
+                    </div>
+                  ) : testimonial.service && (
+                    <p className="text-xs text-caramel mt-1">{testimonial.service}</p>
+                  )}
+                  {!testimonial.title && !testimonial.service && !(testimonial.services && testimonial.services.length > 0) && (
+                    <p className="text-sm text-coffee/60 mt-1">{testimonial.role || "Client"}</p>
+                  )}
                 </div>
               </div>
+
+              {/* Content - Moved below author */}
+              <p className="text-coffee/80 relative z-10 leading-relaxed">
+                {testimonial.message}
+              </p>
             </div>
           ))}
         </div>
@@ -2179,23 +2177,17 @@ function Testimonials() {
         {/* Overall Rating */}
         <div className="mt-16 text-center">
           <div className="inline-flex items-center gap-6 bg-cream rounded-2xl px-8 py-6 shadow-md hover-lift">
-            <div>
-              <p className="stat-number animate-glow">4.9</p>
-              <div className="flex gap-1 text-gold mt-2 justify-center">
-                {[...Array(5)].map((_, i) => (
-                  <span key={i} className="interactive-icon animate-bounce" style={{ animationDelay: `${i * 0.1}s` }}>
-                    <StarIcon />
-                  </span>
-                ))}
-              </div>
+            <div className="text-left">
+              <p className="text-5xl stat-number font-semibold text-gradient count-up">30+</p>
+              <p className="text-coffee/60 mt-1">Years of Experience</p>
             </div>
             <div className="text-left border-l border-sand pl-6">
-              <p className="text-2xl font-bold text-charcoal count-up">500+</p>
-              <p className="text-coffee/60">Happy Clients</p>
+              <p className="text-5xl stat-number font-semibold text-gradient count-up">98%</p>
+              <p className="text-coffee/60 mt-1">Satisfaction Rate</p>
             </div>
             <div className="text-left border-l border-sand pl-6">
-              <p className="text-2xl font-bold text-charcoal count-up">100%</p>
-              <p className="text-coffee/60">Satisfaction Rate</p>
+              <p className="text-5xl stat-number font-semibold text-gradient count-up">500+</p>
+              <p className="text-coffee/60 mt-1">Happy Clients</p>
             </div>
           </div>
         </div>
@@ -2203,6 +2195,110 @@ function Testimonials() {
     </section>
   );
 }
+
+// Helper function to get all services and subcategories for tag selection
+const getAllServiceTags = () => {
+  const services = [
+    {
+      id: 1,
+      title: "MEP Services",
+      subcategories: [
+        { id: "electric", title: "Electric" },
+        { id: "plumbing", title: "Plumbing" },
+      ],
+    },
+    {
+      id: 2,
+      title: "Interior & Furnishing",
+      subcategories: [
+        { id: "polishing-pu-duco", title: "Polishing & PU & Duco", nested: [
+          { id: "polishing", title: "Polishing" },
+          { id: "duco", title: "Duco" },
+          { id: "pu", title: "PU" },
+        ]},
+        { id: "wood-works", title: "Wood Works", nested: [
+          { id: "modular-furniture", title: "Modular Furniture" },
+          { id: "custom-carpentry", title: "Custom Carpentry" },
+          { id: "wardrobes", title: "Wardrobes" },
+          { id: "kitchen-wood", title: "Kitchen" },
+        ]},
+        { id: "fixed-installation", title: "Fixed Installation", nested: [
+          { id: "storage-units", title: "Storage Units" },
+          { id: "wall-panels", title: "Wall Panels" },
+          { id: "electrical-units", title: "Electrical Units" },
+        ]},
+      ],
+    },
+    {
+      id: 3,
+      title: "Surfaces Finishes",
+      subcategories: [
+        { id: "painting-services", title: "Painting Services", nested: [
+          { id: "interior-painting", title: "Interior Painting" },
+          { id: "exterior-painting", title: "Exterior Painting" },
+          { id: "texture-paint", title: "Texture Paint" },
+          { id: "waterproof-coatings", title: "Water Proof Coatings" },
+        ]},
+        { id: "flooring", title: "Flooring", nested: [
+          { id: "tile-flooring", title: "Tile Flooring" },
+          { id: "wooden-flooring", title: "Wooden Flooring" },
+          { id: "marble-granite", title: "Marble & Granite" },
+          { id: "vinyl-laminate", title: "Vinyl & Laminate" },
+        ]},
+      ],
+    },
+    {
+      id: 4,
+      title: "Upgrades & Renovations",
+      subcategories: [
+        { id: "full-home-renovation", title: "Full Home Renovation", nested: [
+          { id: "partial-remodeling", title: "Partial Remodeling" },
+          { id: "commercial-space", title: "Commercial Space" },
+          { id: "bars-shops-restaurant", title: "Bars & Shops & Restaurant" },
+          { id: "showrooms", title: "Showrooms" },
+          { id: "residential-area", title: "Residential Area" },
+          { id: "bedroom", title: "Bedroom" },
+          { id: "bathroom", title: "Bathroom" },
+          { id: "kitchen-renovation", title: "Kitchen" },
+          { id: "dining-room", title: "Dining Room" },
+          { id: "living-room", title: "Living Room" },
+        ]},
+        { id: "flat", title: "Flat" },
+        { id: "terrace", title: "Terrace" },
+        { id: "corporate-areas", title: "Corporate Areas" },
+      ],
+    },
+  ];
+
+  const tags: { id: string; label: string; category: string }[] = [];
+  
+  services.forEach(service => {
+    // Add main service category
+    tags.push({ id: `service-${service.id}`, label: service.title, category: service.title });
+    
+    // Add subcategories - show only subcategory name
+    service.subcategories.forEach(sub => {
+      tags.push({ 
+        id: `sub-${sub.id}`, 
+        label: sub.title, 
+        category: service.title 
+      });
+      
+      // Add nested subcategories if they exist - show only nested subcategory name
+      if (sub.nested) {
+        sub.nested.forEach(nested => {
+          tags.push({ 
+            id: `nested-${nested.id}`, 
+            label: nested.title, 
+            category: service.title 
+          });
+        });
+      }
+    });
+  });
+  
+  return tags;
+};
 
 // Contact Section
 function Contact() {
@@ -2212,11 +2308,29 @@ function Contact() {
     title: "", // New optional field
     phone: "",
     email: "",
-    service: "",
+    services: [] as string[], // Changed to array
     message: "",
     rating: 5,
   });
   const [submitted, setSubmitted] = useState(false);
+  const [availableTags] = useState(getAllServiceTags());
+  const [showTagDropdown, setShowTagDropdown] = useState(false);
+
+  const toggleServiceTag = (tagId: string) => {
+    setFormData(prev => ({
+      ...prev,
+      services: prev.services.includes(tagId)
+        ? prev.services.filter(id => id !== tagId)
+        : [...prev.services, tagId]
+    }));
+  };
+
+  const removeServiceTag = (tagId: string) => {
+    setFormData(prev => ({
+      ...prev,
+      services: prev.services.filter(id => id !== tagId)
+    }));
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -2229,6 +2343,10 @@ function Contact() {
           return;
         }
 
+        const servicesText = formData.services.length > 0 
+          ? `Services: ${formData.services.map(id => availableTags.find(t => t.id === id)?.label).join(', ')}. `
+          : '';
+
         const res = await fetch('/api/queries', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
@@ -2236,7 +2354,7 @@ function Contact() {
             name: formData.name,
             email: formData.email,
             phone: formData.phone,
-            message: `${formData.service ? `Service: ${formData.service}. ` : ''}${formData.message}`,
+            message: `${servicesText}${formData.message}`,
             status: 'requested'
           }),
         });
@@ -2251,7 +2369,7 @@ function Contact() {
             name: formData.name,
             title: formData.title,
             email: formData.email,
-            service: formData.service,
+            services: formData.services.map(id => availableTags.find(t => t.id === id)?.label || id),
             message: formData.message,
             rating: formData.rating,
             visibility: false,
@@ -2264,7 +2382,7 @@ function Contact() {
       console.log("Form submitted:", { formType, ...formData });
       setSubmitted(true);
       setTimeout(() => setSubmitted(false), 3000);
-      setFormData({ name: "", title: "", phone: "", email: "", service: "", message: "", rating: 5 });
+      setFormData({ name: "", title: "", phone: "", email: "", services: [], message: "", rating: 5 });
     } catch (error) {
       console.error(error);
       alert('Failed to submit. Please try again.');
@@ -2291,17 +2409,7 @@ function Contact() {
 
             {/* Contact Details */}
             <div className="space-y-6 mb-10">
-              <a href="tel:+919999999999" className="flex items-center gap-4 group hover-lift">
-                <div className="w-14 h-14 rounded-xl bg-caramel/10 flex items-center justify-center text-caramel group-hover:bg-caramel group-hover:text-white transition-all interactive-icon">
-                  <PhoneIcon />
-                </div>
-                <div>
-                  <p className="text-sm text-coffee/60">Call Us</p>
-                  <p className="text-lg font-semibold text-charcoal">+91 99999 99999</p>
-                </div>
-              </a>
-
-              <a href="https://wa.me/919999999999" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 group hover-lift">
+              {/* <a href="https://wa.me/919999999999" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 group hover-lift">
                 <div className="w-14 h-14 rounded-xl bg-green-100 flex items-center justify-center text-green-600 group-hover:bg-green-500 group-hover:text-white transition-all interactive-icon">
                   <WhatsAppIcon />
                 </div>
@@ -2309,7 +2417,7 @@ function Contact() {
                   <p className="text-sm text-coffee/60">WhatsApp</p>
                   <p className="text-lg font-semibold text-charcoal">+91 99999 99999</p>
                 </div>
-              </a>
+              </a> */}
 
               <a href="mailto:info@LVinteriors.com" className="flex items-center gap-4 group hover-lift">
                 <div className="w-14 h-14 rounded-xl bg-caramel/10 flex items-center justify-center text-caramel group-hover:bg-caramel group-hover:text-white transition-all interactive-icon">
@@ -2317,7 +2425,7 @@ function Contact() {
                 </div>
                 <div>
                   <p className="text-sm text-coffee/60">Email Us</p>
-                  <p className="text-lg font-semibold text-charcoal">info@LVinteriors.com</p>
+                  <p className="text-lg font-semibold text-charcoal">lvinteriorworks@gmail.com</p>
                 </div>
               </a>
 
@@ -2331,25 +2439,10 @@ function Contact() {
                 </div>
               </div>
             </div>
-
-            {/* Working Hours */}
-            <div className="bg-white rounded-2xl p-6 shadow-md">
-              <h4 className="font-semibold text-charcoal mb-4">Working Hours</h4>
-              <div className="space-y-2 text-coffee/70">
-                <div className="flex justify-between">
-                  <span>Monday - Saturday</span>
-                  <span className="font-medium text-charcoal">9:00 AM - 7:00 PM</span>
-                </div>
-                <div className="flex justify-between">
-                  <span>Sunday</span>
-                  <span className="font-medium text-charcoal">10:00 AM - 5:00 PM</span>
-                </div>
-              </div>
-            </div>
           </div>
 
           {/* Contact Form */}
-          <div className="bg-white rounded-3xl p-8 md:p-10 shadow-xl">
+          <div className="bg-white rounded-3xl p-8 md:p-10 shadow-xl relative overflow-hidden">
             {/* Form Type Toggle */}
             <div className="flex gap-2 mb-8 bg-cream rounded-xl p-1.5">
               <button
@@ -2434,21 +2527,84 @@ function Contact() {
                     />
                   </div>
 
-                  <div>
-                    <select
-                      className="w-full px-5 py-4 border-2 border-sand rounded-xl bg-white text-coffee focus:outline-none focus:border-caramel transition-all"
-                      value={formData.service}
-                      onChange={(e) => setFormData({ ...formData, service: e.target.value })}
-                      required
-                    >
-                      <option value="">
-                        {formType === "query" ? "Select Service *" : "Service You Used *"}
-                      </option>
-                      <option value="Painting & Wall Finishes">Painting & Wall Finishes</option>
-                      <option value="Wood Finish, Polish & PU">Wood Finish, Polish & PU</option>
-                      <option value="Interior Civil & Renovation">Interior Civil & Renovation</option>
-                      <option value="Multiple Services">Multiple Services</option>
-                    </select>
+                  <div className="relative">
+                    <label className="block text-sm font-medium text-coffee mb-3">
+                      TAGS
+                    </label>
+                    
+                    {/* Tag Input Field with Selected Tags */}
+                    <div className="relative">
+                      <div
+                        onClick={() => setShowTagDropdown(!showTagDropdown)}
+                        className="w-full min-h-[56px] px-4 py-3 border-2 border-sand rounded-xl bg-white text-coffee focus-within:border-caramel transition-all cursor-text flex flex-wrap gap-2 items-center"
+                      >
+                        {formData.services.length > 0 ? (
+                          formData.services.map(tagId => {
+                            const tag = availableTags.find(t => t.id === tagId);
+                            if (!tag) return null;
+                            return (
+                              <span
+                                key={tagId}
+                                className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-caramel/10 text-caramel rounded-full text-sm font-medium whitespace-nowrap"
+                              >
+                                <span className="whitespace-nowrap break-keep">{tag.label}</span>
+                                <button
+                                  type="button"
+                                  onClick={(e) => {
+                                    e.stopPropagation();
+                                    removeServiceTag(tagId);
+                                  }}
+                                  className="hover:text-coffee transition-colors text-caramel/70 hover:text-caramel flex-shrink-0"
+                                >
+                                  <CloseIcon />
+                                </button>
+                              </span>
+                            );
+                          })
+                        ) : (
+                          <span className="text-coffee/50 text-sm">
+                            {formType === "query" ? "Select services..." : "Select services used..."}
+                          </span>
+                        )}
+                      </div>
+                      
+                      {/* Tag Dropdown Panel */}
+                      {showTagDropdown && (
+                        <>
+                          <div 
+                            className="fixed inset-0 z-10" 
+                            onClick={() => setShowTagDropdown(false)}
+                          ></div>
+                          <div className="absolute z-20 w-full mt-2 bg-white border-2 border-sand rounded-xl shadow-xl" style={{ maxHeight: '400px' }}>
+                            <div className="p-4 overflow-y-auto hide-scrollbar" style={{ maxHeight: '384px' }}>
+                              <div className="flex flex-wrap gap-2">
+                                {availableTags.map(tag => {
+                                  const isSelected = formData.services.includes(tag.id);
+                                  return (
+                                    <button
+                                      key={tag.id}
+                                      type="button"
+                                      onClick={() => toggleServiceTag(tag.id)}
+                                      className={`px-3 py-2 rounded-full text-sm font-medium transition-all whitespace-nowrap break-keep ${
+                                        isSelected
+                                          ? 'bg-caramel text-white hover:bg-caramel/90'
+                                          : 'bg-cream text-coffee hover:bg-sand'
+                                      }`}
+                                    >
+                                      {tag.label}
+                                    </button>
+                                  );
+                                })}
+                              </div>
+                            </div>
+                          </div>
+                        </>
+                      )}
+                    </div>
+                    
+                    {formData.services.length === 0 && (
+                      <p className="text-xs text-red-500 mt-1">* Please select at least one service</p>
+                    )}
                   </div>
 
                   {formType === "feedback" && (
@@ -2483,7 +2639,11 @@ function Contact() {
                     ></textarea>
                   </div>
 
-                  <button type="submit" className="btn-primary w-full text-center justify-center">
+                  <button 
+                    type="submit" 
+                    className={`btn-primary w-full text-center justify-center ${formData.services.length === 0 ? 'opacity-50 cursor-not-allowed' : ''}`}
+                    disabled={formData.services.length === 0}
+                  >
                     {formType === "query" ? "Submit Query" : "Submit Feedback"}
                   </button>
                 </form>
@@ -2504,20 +2664,24 @@ function Footer() {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand */}
           <div className="lg:col-span-2">
-            <div className="flex items-center gap-2 mb-6">
-              <div className="w-10 h-10 rounded-xl bg-caramel flex items-center justify-center">
-                <span className="text-white font-bold text-lg font-[family-name:var(--font-display)]">A</span>
-              </div>
+            <div className="flex items-center gap-3 mb-6">
+              <Image 
+                src="/LVLogo.png" 
+                alt="LV Interiors" 
+                width={50} 
+                height={50}
+                className="object-contain bg-white rounded-full"
+              />
               <span className="font-[family-name:var(--font-display)] text-2xl font-semibold text-cream">
                 LV Interiors
               </span>
             </div>
             <p className="text-cream/60 mb-6 max-w-md leading-relaxed">
               Premium painting, wood finishing, and renovation services that bring your vision to life.
-              Serving Delhi NCR with excellence since 2016.
+              Serving Delhi NCR with excellence since 1995.
             </p>
             <div className="flex gap-4">
-              <a
+              {/* <a
                 href="https://wa.me/919999999999"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -2530,9 +2694,9 @@ function Footer() {
                 className="w-10 h-10 rounded-lg bg-cream/10 flex items-center justify-center text-cream hover:bg-caramel transition-colors"
               >
                 <PhoneIcon />
-              </a>
+              </a> */}
               <a
-                href="mailto:info@LVinteriors.com"
+                href="mailto:lvinteriorworks@gmail.com"
                 className="w-10 h-10 rounded-lg bg-cream/10 flex items-center justify-center text-cream hover:bg-caramel transition-colors"
               >
                 <MailIcon />
