@@ -15,7 +15,7 @@ function Hero() {
       <div className="absolute inset-0">
         <Image
           src="/hero-interior.png"
-          alt="LV Interiors"
+          alt="LV Spaces"
           fill
           className="object-cover"
           priority
@@ -29,7 +29,7 @@ function Hero() {
         <div className="flex justify-center md:hidden">
           <Image
             src="/LVLogo.png"
-            alt="LV Interiors Logo"
+            alt="LV Spaces Logo"
             width={80}
             height={80}
             className="drop-shadow-lg"
@@ -45,13 +45,15 @@ function Hero() {
           </div>
           
           <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold font-display leading-tight max-w-4xl">
-            Transform Your Space<br />
-            <span className="text-caramel">Into a Masterpiece</span>
+            Curating Luxury Living<br />
+            <span className="text-caramel">Where Elegance Meets Lifestyle</span>
           </h1>
           
-          <p className="text-sm md:text-lg text-white/80 max-w-xs md:max-w-2xl mx-auto">
-            Premium interior & painting services for homes and businesses in Delhi NCR. 
-            30+ years of excellence in craftsmanship.
+          <p className="text-sm md:text-lg text-white/80 max-w-xs md:max-w-2xl mx-auto italic">
+            "Elegance is not a luxury, it's lifestyle."<br />
+            <span className="text-xs md:text-base not-italic mt-2 block">
+              Bespoke interior design and premium finishing services for discerning clients in Delhi NCR.
+            </span>
           </p>
 
           {/* CTA Buttons */}
@@ -68,7 +70,7 @@ function Hero() {
         {/* Bottom Badge */}
         <div className="text-center">
           <p className="text-xs md:text-sm text-white/70">
-            Trusted & Reliable • Premium Quality Guaranteed
+            Bespoke Design • Exceptional Craftsmanship • Timeless Elegance
           </p>
         </div>
       </div>
@@ -83,15 +85,15 @@ function StatsSection() {
       <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-3 gap-4 md:gap-8 text-center text-white">
           <div className="p-4 md:p-8">
-            <p className="text-3xl md:text-5xl lg:text-6xl font-bold text-caramel font-display">30+</p>
+            <p className="text-3xl md:text-5xl lg:text-6xl font-bold font-display bg-gradient-to-br from-white via-gold to-white bg-clip-text text-transparent">30+</p>
             <p className="text-xs md:text-base text-white/70 mt-1 md:mt-2">Years of Experience</p>
           </div>
           <div className="p-4 md:p-8">
-            <p className="text-3xl md:text-5xl lg:text-6xl font-bold text-caramel font-display">500+</p>
+            <p className="text-3xl md:text-5xl lg:text-6xl font-bold font-display bg-gradient-to-br from-white via-gold to-white bg-clip-text text-transparent">500+</p>
             <p className="text-xs md:text-base text-white/70 mt-1 md:mt-2">Happy Clients</p>
           </div>
           <div className="p-4 md:p-8">
-            <p className="text-3xl md:text-5xl lg:text-6xl font-bold text-caramel font-display">98%</p>
+            <p className="text-3xl md:text-5xl lg:text-6xl font-bold font-display bg-gradient-to-br from-white via-gold to-white bg-clip-text text-transparent">98%</p>
             <p className="text-xs md:text-base text-white/70 mt-1 md:mt-2">Satisfaction Rate</p>
           </div>
         </div>
@@ -343,10 +345,13 @@ function Footer() {
         <div className="grid md:grid-cols-4 gap-8">
           {/* Logo & About */}
           <div className="col-span-2">
-            <Image src="/LVLogo.png" alt="LV Interiors" width={60} height={60} className="mb-4" />
-            <p className="text-white/70 max-w-md">
-              LV Interiors has been Delhi NCR&apos;s trusted partner for premium interior and painting services since 1995. 
-              Quality craftsmanship guaranteed.
+            <Image src="/LVLogo.png" alt="LV Spaces" width={60} height={60} className="mb-4" />
+            <p className="text-white/70 max-w-md italic mb-2">
+              "Elegance is not a luxury, it's lifestyle."
+            </p>
+            <p className="text-white/60 max-w-md text-sm">
+              Since 1995, LV Spaces has been curating luxury living experiences for discerning clients across Delhi NCR. 
+              Bespoke design, exceptional craftsmanship, timeless elegance.
             </p>
           </div>
           
@@ -372,7 +377,7 @@ function Footer() {
         </div>
         
         <div className="border-t border-white/10 mt-8 pt-8 text-center text-white/50 text-sm">
-          © {new Date().getFullYear()} LV Interiors. All rights reserved.
+          © {new Date().getFullYear()} LV Spaces. All rights reserved.
         </div>
       </div>
     </footer>

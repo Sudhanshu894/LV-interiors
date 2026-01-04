@@ -1,20 +1,20 @@
 @import "tailwindcss";
 
 :root {
-  /* Warm Earth Tone Palette */
-  --cream: #FAF7F2;
-  --cream-dark: #F5F0E8;
-  --sand: #E8DFD1;
-  --taupe: #C4B5A0;
-  --caramel: #A67C52;
-  --coffee: #6B4E35;
-  --espresso: #3D2E1E;
-  --charcoal: #2A2118;
+  /* Luxury Pearl & Emerald Palette */
+  --cream: #FDFCFA;
+  --cream-dark: #F8F7F5;
+  --sand: #EFEEEC;
+  --taupe: #B8B5B0;
+  --caramel: #0F5B4D;
+  --coffee: #0A4D41;
+  --espresso: #073D33;
+  --charcoal: #1A1A1A;
   
   /* Accent Colors */
-  --gold: #C9A962;
-  --terracotta: #C67B5C;
-  --olive: #7A8B6E;
+  --gold: #C0C0C0;
+  --terracotta: #0F5B4D;
+  --olive: #0F5B4D;
   
   /* UI Colors */
   --background: var(--cream);
@@ -23,10 +23,10 @@
   --border: var(--sand);
   
   /* Shadows */
-  --shadow-sm: 0 1px 2px rgba(61, 46, 30, 0.05);
-  --shadow-md: 0 4px 12px rgba(61, 46, 30, 0.08);
-  --shadow-lg: 0 12px 40px rgba(61, 46, 30, 0.12);
-  --shadow-xl: 0 20px 60px rgba(61, 46, 30, 0.15);
+  --shadow-sm: 0 1px 2px rgba(15, 91, 77, 0.05);
+  --shadow-md: 0 4px 12px rgba(15, 91, 77, 0.08);
+  --shadow-lg: 0 12px 40px rgba(15, 91, 77, 0.12);
+  --shadow-xl: 0 20px 60px rgba(15, 91, 77, 0.15);
 }
 
 @theme inline {
@@ -324,7 +324,7 @@ h1, h2, h3, h4, h5, h6 {
   background: linear-gradient(135deg, var(--espresso) 0%, var(--coffee) 50%, var(--caramel) 100%);
 }
 
-/* Text Gradient */
+/* Text Gradient - Emerald & Silver */
 .text-gradient {
   background: linear-gradient(135deg, var(--caramel) 0%, var(--gold) 100%);
   -webkit-background-clip: text;
@@ -352,9 +352,9 @@ h1, h2, h3, h4, h5, h6 {
   transform: translateY(-5px);
 }
 
-/* Button Styles */
+/* Button Styles - Emerald Primary */
 .btn-primary {
-  background: linear-gradient(135deg, var(--caramel) 0%, var(--coffee) 100%);
+  background: linear-gradient(135deg, #0F5B4D 0%, #0A4D41 100%);
   color: white;
   padding: 14px 32px;
   border-radius: 50px;
@@ -362,7 +362,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 0.95rem;
   letter-spacing: 0.02em;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 0 4px 15px rgba(166, 124, 82, 0.3);
+  box-shadow: 0 4px 15px rgba(15, 91, 77, 0.3);
   border: none;
   cursor: pointer;
   position: relative;
@@ -393,7 +393,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .btn-primary:hover {
   transform: translateY(-2px) scale(1.02);
-  box-shadow: 0 8px 25px rgba(166, 124, 82, 0.4);
+  box-shadow: 0 8px 25px rgba(15, 91, 77, 0.4);
 }
 
 .btn-primary:active {
@@ -408,15 +408,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .btn-secondary {
-  background: transparent;
-  color: var(--coffee);
+  background: linear-gradient(135deg, #C0C0C0 0%, #A8A8A8 100%);
+  color: var(--espresso);
   padding: 14px 32px;
   border-radius: 50px;
   font-weight: 600;
   font-size: 0.95rem;
   letter-spacing: 0.02em;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  border: 2px solid var(--coffee);
+  border: 2px solid transparent;
   cursor: pointer;
   position: relative;
   overflow: hidden;
@@ -424,6 +424,7 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
   justify-content: center;
   gap: 8px;
+  box-shadow: 0 2px 8px rgba(192, 192, 192, 0.2);
 }
 
 .btn-secondary::before {
@@ -433,7 +434,7 @@ h1, h2, h3, h4, h5, h6 {
   left: -100%;
   width: 100%;
   height: 100%;
-  background: var(--coffee);
+  background: linear-gradient(135deg, #D4D4D4 0%, #C0C0C0 100%);
   transition: left 0.3s ease;
   z-index: -1;
 }
@@ -443,10 +444,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .btn-secondary:hover {
-  background: var(--coffee);
-  color: white;
+  color: var(--espresso);
   transform: translateY(-2px) scale(1.02);
-  box-shadow: 0 4px 15px rgba(107, 78, 53, 0.3);
+  box-shadow: 0 4px 15px rgba(192, 192, 192, 0.4);
 }
 
 .btn-secondary:active {
@@ -611,13 +611,13 @@ input::placeholder, textarea::placeholder {
   width: 100%;
 }
 
-/* Stats */
+/* Stats - Emerald & Silver */
 .stat-number {
   font-family: var(--font-cormorant), Georgia, serif;
   font-size: 3.5rem;
   font-weight: 700;
   line-height: 1;
-  background: linear-gradient(135deg, var(--caramel) 0%, var(--gold) 100%);
+  background: linear-gradient(135deg, #0F5B4D 0%, #C0C0C0 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;

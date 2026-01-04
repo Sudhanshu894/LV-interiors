@@ -13,7 +13,7 @@ const testimonials = [
     name: "Rahul Mehta",
     title: "Homeowner, South Delhi",
     rating: 5,
-    message: "LV Interiors transformed our home beautifully. The attention to detail and quality of work exceeded our expectations. Highly recommended!",
+    message: "LV Spaces transformed our home beautifully. The attention to detail and quality of work exceeded our expectations. Highly recommended!",
     services: ["Interior Painting", "Wood Works"],
   },
   {
@@ -59,17 +59,20 @@ function AboutHero() {
         <div className="mb-4 md:mb-6">
           <Image
             src="/LVLogo.png"
-            alt="LV Interiors"
+            alt="LV Spaces"
             width={80}
             height={80}
             className="mx-auto md:w-[100px] md:h-[100px]"
           />
         </div>
         <h1 className="text-3xl md:text-5xl font-bold text-white font-display mb-2 md:mb-4">
-          About LV Interiors
+          About LV Spaces
         </h1>
-        <p className="text-white/70 max-w-sm md:max-w-xl text-sm md:text-lg">
-          Transforming spaces with excellence since 1995. Delhi NCR&apos;s trusted partner for premium interior services.
+        <p className="text-white/70 max-w-sm md:max-w-xl text-sm md:text-lg italic">
+          "Elegance is not a luxury, it's lifestyle."
+        </p>
+        <p className="text-white/60 max-w-sm md:max-w-xl text-xs md:text-base mt-2">
+          Curating luxury living experiences since 1995
         </p>
       </div>
     </section>
@@ -151,15 +154,20 @@ function AboutContent() {
             <h2 className="text-xl md:text-3xl font-bold text-espresso font-display mb-4 md:mb-6">Our Story</h2>
             
             <div className="space-y-4 text-coffee text-sm md:text-base">
-              <p>
-                LV Interiors has been Delhi NCR&apos;s trusted partner for interior and painting services since 1995. 
-                With over three decades of experience, we&apos;ve transformed thousands of spaces from homes to offices, 
-                restaurants to retail spaces.
+              <p className="italic text-espresso">
+                "Elegance is not a luxury, it's lifestyle."
               </p>
               
               <p>
-                Our team of skilled craftsmen and designers work together to bring your vision to life, 
-                combining traditional techniques with modern innovations to deliver exceptional results.
+                Since 1995, LV Spaces has been the preferred choice for discerning clients seeking bespoke interior solutions 
+                in Delhi NCR. We don&apos;t just design spaces—we curate lifestyle experiences that reflect sophistication, 
+                elegance, and timeless beauty.
+              </p>
+              
+              <p>
+                Our atelier of master craftsmen and design visionaries collaborate to create environments that transcend 
+                trends, delivering interiors that are as functional as they are exquisite. Every project is a testament 
+                to our unwavering commitment to excellence.
               </p>
             </div>
 
@@ -465,7 +473,7 @@ function Footer() {
     <footer className="hidden md:block bg-espresso text-white py-12">
       <div className="max-w-7xl mx-auto px-8">
         <div className="text-center text-white/50 text-sm">
-          © {new Date().getFullYear()} LV Interiors. All rights reserved.
+          © {new Date().getFullYear()} LV Spaces. All rights reserved.
         </div>
       </div>
     </footer>

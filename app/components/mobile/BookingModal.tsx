@@ -273,7 +273,7 @@ export default function BookingModal({ onClose }: BookingModalProps) {
                   {contractAccepted && <CheckIcon />}
                 </button>
                 <span className="text-sm text-coffee">
-                  I agree to the terms and conditions and authorize LV Interiors to contact me regarding this booking.
+                  I agree to the terms and conditions and authorize LV Spaces to contact me regarding this booking.
                 </span>
               </label>
 
@@ -291,7 +291,7 @@ export default function BookingModal({ onClose }: BookingModalProps) {
               </div>
               <h3 className="text-xl font-semibold text-espresso mb-2">Booking Confirmed!</h3>
               <p className="text-coffee mb-4">
-                Thank you for choosing LV Interiors
+                Thank you for choosing LV Spaces
               </p>
               <div className="p-4 bg-cream-dark rounded-xl inline-block">
                 <p className="text-sm text-taupe">Booking Reference</p>

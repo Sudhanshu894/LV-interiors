@@ -18,7 +18,8 @@ function ContactInfo() {
     <section className="px-4 md:px-8 py-6 md:py-10">
       <div className="max-w-4xl mx-auto">
         <div className="bg-gradient-to-br from-coffee to-espresso rounded-2xl p-6 md:p-10 text-white">
-          <h2 className="text-xl md:text-3xl font-bold font-display mb-4 md:mb-6">Get In Touch</h2>
+          <h2 className="text-xl md:text-3xl font-bold font-display mb-2">Get In Touch</h2>
+          <p className="text-white/70 text-sm italic mb-4 md:mb-6">We're here to assist you with your luxury living aspirations</p>
           
           <div className="grid sm:grid-cols-2 gap-4">
             <a 
@@ -529,7 +530,7 @@ function Footer() {
     <footer className="hidden md:block bg-espresso text-white py-8">
       <div className="max-w-7xl mx-auto px-8">
         <div className="text-center text-white/50 text-sm">
-          © {new Date().getFullYear()} LV Interiors. All rights reserved.
+          © {new Date().getFullYear()} LV Spaces. All rights reserved.
         </div>
       </div>
     </footer>

@@ -290,7 +290,7 @@ export default function GalleryPage() {
       <footer className="hidden md:block bg-espresso text-white py-8">
         <div className="max-w-7xl mx-auto px-8">
           <div className="text-center text-white/50 text-sm">
-            © {new Date().getFullYear()} LV Interiors. All rights reserved.
+            © {new Date().getFullYear()} LV Spaces. All rights reserved.
           </div>
         </div>
       </footer>

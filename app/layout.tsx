@@ -25,32 +25,32 @@ const logoUrl = `${baseUrl}/LVLogo.png`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
-  title: "LV Interiors | Premium Interior & Painting Services",
-  description: "Transform your space with LV Interiors. Expert painting, wood finishing, and renovation services. Quality craftsmanship for homes and businesses.",
-  keywords: "interior design, painting services, wood polish, PU coating, renovation, home improvement",
+  title: "LV Spaces | Curating Luxury Living",
+  description: "Elegance is not a luxury, it's lifestyle. LV Spaces creates bespoke interiors that redefine sophistication. Premium design, finishing, and renovation services for discerning clients.",
+  keywords: "luxury interior design, bespoke interiors, premium painting services, wood finishing, luxury renovation, high-end home improvement, curated living spaces",
   icons: {
     icon: "/LVLogo.png",
   },
   openGraph: {
     type: "website",
     url: baseUrl,
-    siteName: "LV Interiors",
-    title: "LV Interiors | Premium Interior & Painting Services",
-    description: "Transform your space with LV Interiors. Expert painting, wood finishing, and renovation services. Quality craftsmanship for homes and businesses.",
+    siteName: "LV Spaces",
+    title: "LV Spaces | Curating Luxury Living",
+    description: "Elegance is not a luxury, it's lifestyle. LV Spaces creates bespoke interiors that redefine sophistication.",
     images: [
       { 
         url: logoUrl,
         width: 1200,
         height: 630,
-        alt: "LV Interiors Logo",
+        alt: "LV Spaces Logo",
       },
     ],
     locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
-    title: "LV Interiors | Premium Interior & Painting Services",
-    description: "Transform your space with LV Interiors. Expert painting, wood finishing, and renovation services. Quality craftsmanship for homes and businesses.",
+    title: "LV Spaces | Curating Luxury Living",
+    description: "Elegance is not a luxury, it's lifestyle. LV Spaces creates bespoke interiors that redefine sophistication.",
     images: [
       { url: logoUrl },
     ],
@@ -62,7 +62,7 @@ export const metadata: Metadata = {
     // Additional explicit meta tags for WhatsApp compatibility
     'og:image:width': '1200',
     'og:image:height': '630',
-    'og:image:alt': 'LV Interiors Logo',
+    'og:image:alt': 'LV Spaces Logo',
   },
 };
 
@@ -75,19 +75,19 @@ export default function RootLayout({
     <html lang="en" className="scroll-smooth">
       <head>
         {/* Explicit meta tags for WhatsApp - These are in addition to Next.js metadata API */}
-        <meta property="og:title" content="LV Interiors | Premium Interior & Painting Services" />
-        <meta property="og:description" content="Transform your space with LV Interiors. Expert painting, wood finishing, and renovation services. Quality craftsmanship for homes and businesses." />
+        <meta property="og:title" content="LV Spaces | Curating Luxury Living" />
+        <meta property="og:description" content="Elegance is not a luxury, it's lifestyle. LV Spaces creates bespoke interiors that redefine sophistication." />
         <meta property="og:image" content={logoUrl} />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
-        <meta property="og:image:alt" content="LV Interiors Logo" />
+        <meta property="og:image:alt" content="LV Spaces Logo" />
         <meta property="og:url" content={baseUrl} />
         <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="LV Interiors" />
+        <meta property="og:site_name" content="LV Spaces" />
         <meta property="og:locale" content="en_US" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="LV Interiors | Premium Interior & Painting Services" />
-        <meta name="twitter:description" content="Transform your space with LV Interiors. Expert painting, wood finishing, and renovation services. Quality craftsmanship for homes and businesses." />
+        <meta name="twitter:title" content="LV Spaces | Curating Luxury Living" />
+        <meta name="twitter:description" content="Elegance is not a luxury, it's lifestyle. LV Spaces creates bespoke interiors that redefine sophistication." />
         <meta name="twitter:image" content={logoUrl} />
         <link rel="canonical" href={baseUrl} />
       </head>

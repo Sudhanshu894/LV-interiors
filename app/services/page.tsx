@@ -340,8 +340,8 @@ export default function ServicesPage() {
     <ResponsiveLayout>
       {/* Header */}
       <div className="px-4 md:px-8 pt-6 md:pt-8 pb-2 md:pb-4 max-w-7xl mx-auto">
-        <h1 className="text-2xl md:text-4xl font-bold text-espresso font-display">Our Services</h1>
-        <p className="text-sm md:text-lg text-taupe mt-1">Select services to get started with your project</p>
+        <h1 className="text-2xl md:text-4xl font-bold text-espresso font-display">Bespoke Services</h1>
+        <p className="text-sm md:text-lg text-taupe mt-1 italic">Curated solutions for discerning clientele</p>
       </div>
 
       {/* Tags Bar */}

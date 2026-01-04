@@ -52,7 +52,7 @@ export default function TopNavigation() {
           {/* Logo */}
           <Link href="/home" className="flex items-center gap-2 hover-lift interactive-icon">
             <div className="w-40 h-40 rounded-xl flex items-center justify-center transition-transform hover:scale-110">
-              <Image src="/LVLogo.png" alt="LV Interiors" width={100} height={100} />
+              <Image src="/LVLogo.png" alt="LV Spaces" width={100} height={100} />
             </div>
           </Link>
 
